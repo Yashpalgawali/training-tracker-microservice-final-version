@@ -1,0 +1,13 @@
+server:
+  port: 7071
+spring:
+  application:
+    name: company
+  datasource:
+    url: jdbc:mysql://localhost:3399/trainingtracker
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

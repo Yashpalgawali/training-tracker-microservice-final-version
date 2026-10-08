@@ -1,0 +1,63 @@
+package com.example.demo.service.impl;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.repository.CompanyRepository;
+import com.example.demo.service.ICompanyService;
+import com.example.demo.dto.CompanyDto;
+import com.example.demo.entity.Company;
+
+import lombok.RequiredArgsConstructor;
+
+@Service("compserv")
+@RequiredArgsConstructor
+public class CompanyServImpl implements ICompanyService {
+
+	private final CompanyRepository comprepo;
+	
+	@Override
+	public void CompanyDto(CompanyDto companyDto) {
+		
+		if(companyDto.getCompanyName()=="") {
+			throw new RuntimeException("Company name can't be blank");
+		}
+		
+		Optional<Company> found = comprepo.findByCompanyName(companyDto.getCompanyName());
+		if(found.isPresent()) {
+			throw new RuntimeException("Company is already present with the given name "+companyDto.getCompanyName());
+		}
+		
+		
+
+	}
+
+	@Override
+	public CompanyDto getCompanyById(Long companyId) {
+		
+		comprepo.findById(companyId).get();
+		
+		return null;
+	}
+
+	@Override
+	public CompanyDto getCompanyByName(String companyName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<com.example.demo.dto.CompanyDto> getAllCompanies() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void updateCompanyDto(com.example.demo.dto.CompanyDto companyDto) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,50 @@
+package com.example.demo.service.impl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.dto.DepartmentDto;
+import com.example.demo.repository.DepartmentRepository;
+import com.example.demo.service.IDepartmentService;
+
+import lombok.RequiredArgsConstructor;
+
+@Service("deptserv")
+@RequiredArgsConstructor
+public class DepartmentServImpl implements IDepartmentService {
+
+	private final DepartmentRepository deptrepo;
+	
+	@Override
+	public void createDepartment(DepartmentDto departmentDto) {
+		
+		
+
+	}
+
+	@Override
+	public List<DepartmentDto> getAllDepartments() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DepartmentDto getDepartmentbyId(Long deptId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<DepartmentDto> getDepartmentbyCompanyId(Long companyId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void updateDepartment(DepartmentDto departmentDto) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

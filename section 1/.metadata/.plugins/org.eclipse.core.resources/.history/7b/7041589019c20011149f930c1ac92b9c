@@ -1,0 +1,24 @@
+package com.example.demo.mapper;
+
+import com.example.demo.dto.DepartmentDto;
+import com.example.demo.entity.Department;
+
+public class DepartmentMapper {
+
+	public static Department mapToDepartment(DepartmentDto departmentDto, Department department) {
+		
+		department.setDepartmentId(departmentDto.getDepartmentId());
+		department.setDepartmentName(departmentDto.getDepartmentName());
+		department.setCompanyId(departmentDto.getCompanyId());
+		return  department;
+	}
+	
+	public static Department mapToDepartment(DepartmentDto departmentDto, Department department) {
+		
+		department.setDepartmentId(departmentDto.getDepartmentId());
+		department.setDepartmentName(departmentDto.getDepartmentName());
+		department.setCompanyId(departmentDto.getCompanyId());
+		department.setCompanyName(departmentDto.getCompanyName());
+		return  department;
+	}
+}

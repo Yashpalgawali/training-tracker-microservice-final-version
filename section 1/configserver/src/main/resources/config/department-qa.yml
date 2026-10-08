@@ -1,0 +1,11 @@
+build:
+  version: "2.1"
+
+department:
+  message: "Welcome to TrainingTracker department related QA API's"
+  contactDetails:
+    name: "Shaura Gawali"
+    email: "shaurya@gmail.com"
+  onCallSupport:
+    - (222)- 123456
+    - (222)- 987456

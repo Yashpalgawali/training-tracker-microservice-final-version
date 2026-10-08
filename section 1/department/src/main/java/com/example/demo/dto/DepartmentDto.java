@@ -1,0 +1,22 @@
+package com.example.demo.dto;
+
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.experimental.FieldDefaults;
+
+@Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class DepartmentDto {
+
+	Long departmentId;
+
+	@NotEmpty(message = "Department name can't be blank")
+	@Size(min=2 ,max=50, message = "Department name must have at least 2 or 50 characters")
+	String departmentName;
+	
+	Long companyId;
+	
+	String companyName;
+}

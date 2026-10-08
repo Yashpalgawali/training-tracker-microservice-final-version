@@ -1,0 +1,92 @@
+package com.example.demo.service.impl;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.dto.DepartmentDto;
+import com.example.demo.entity.Department;
+import com.example.demo.exception.GlobalException;
+import com.example.demo.exception.ResourceAlreadyExistsException;
+import com.example.demo.exception.ResourceNotFoundException;
+import com.example.demo.mapper.DepartmentMapper;
+import com.example.demo.repository.DepartmentRepository;
+import com.example.demo.service.IDepartmentService;
+
+import lombok.RequiredArgsConstructor;
+
+@Service("deptserv")
+@RequiredArgsConstructor
+public class DepartmentServImpl implements IDepartmentService {
+
+	private final DepartmentRepository deptrepo;
+
+	@Override
+	public void createDepartment(DepartmentDto departmentDto) {
+
+		Optional<Department> found = deptrepo.findByCompanyIdAndDepartmentName(departmentDto.getCompanyId(), departmentDto.getDepartmentName());
+		
+		if(found.isPresent()) {
+			throw new ResourceAlreadyExistsException("Department", "Name", departmentDto.getDepartmentName());
+		}
+		
+		Department mappedDept = DepartmentMapper.mapToDepartment(departmentDto, new Department());
+
+		Department savedDept = deptrepo.save(mappedDept);
+		if (savedDept == null) {
+			throw new GlobalException("Department " + departmentDto.getDepartmentName() + " is not created");
+		}
+	}
+
+	@Override
+	public List<DepartmentDto> getAllDepartments() {
+		var list = deptrepo.findAll();
+		if (list.size() < 0) {
+			throw new ResourceNotFoundException("Department", "List", null);
+		}
+		return list.stream().map(dept -> {
+
+			return DepartmentMapper.mapToDepartmentDto(dept, new DepartmentDto());
+//			DepartmentDto dto = new DepartmentDto();
+//
+//			dto.setDepartmentId(dept.getDepartmentId());
+//			dto.setDepartmentName(dept.getDepartmentName());
+//			dto.setCompanyId(dept.getCompanyId());
+//			return dto;
+
+		}).collect(Collectors.toList());
+
+	}
+
+	@Override
+	public DepartmentDto getDepartmentbyId(Long deptId) {
+		Department found = deptrepo.findById(deptId).orElseThrow(() -> new ResourceNotFoundException("Department", "ID", String.valueOf(deptId)));
+		return DepartmentMapper.mapToDepartmentDto( found, new DepartmentDto());
+	}
+
+	@Override
+	public List<DepartmentDto> getDepartmentbyCompanyId(Long companyId) {
+		List<Department> deptList = deptrepo.findByCompanyId(companyId);
+		if(deptList.size() <0 ) {
+			throw new ResourceNotFoundException("Department", "Company ID", String.valueOf(companyId));
+		}
+		
+		return deptList.stream().map(dept-> {			
+			return DepartmentMapper.mapToDepartmentDto(dept, new DepartmentDto());			
+		}).collect(Collectors.toList());		 
+	}
+
+	@Override
+	public void updateDepartment(DepartmentDto departmentDto) {
+		Department mappedDept = DepartmentMapper.mapToDepartment(departmentDto, new Department());
+
+		Department savedDept = deptrepo.save(mappedDept);
+		if (savedDept == null) {
+			throw new GlobalException("Department " + departmentDto.getDepartmentName() + " is not updated");
+		}
+
+	}
+
+}

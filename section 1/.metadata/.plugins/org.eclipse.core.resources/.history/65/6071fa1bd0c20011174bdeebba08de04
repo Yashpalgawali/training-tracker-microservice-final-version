@@ -1,0 +1,12 @@
+build:
+  version: "2.0"
+
+company:
+  message: "Welcome to TrainingTracker company related PROD API's"
+  contactDetails:
+    name: "Yashpal Gawali"
+    email: "crankyash@gmail.com"
+  onCallSupport:
+    - (111)- 123456
+    - (111)- 987456
+

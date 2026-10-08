@@ -1,0 +1,12 @@
+package com.example.demo.mapper;
+
+import com.example.demo.dto.CompanyDto;
+import com.example.demo.entity.Company;
+
+public class CompanyMapper {
+
+	public static Company mapToCompany(CompanyDto companyDto, Company company) {
+		
+		return company;		
+	}
+}

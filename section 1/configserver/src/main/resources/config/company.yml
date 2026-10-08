@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+company:
+  message: "Welcome to TrainingTracker company related local API's"
+  contactDetails:
+    name: "Shaurya"
+    email: "shaurya@gmail.com"
+  onCallSupport:
+    - (111)- 123456
+    - (111)- 987456

@@ -1,0 +1,23 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: configserver
+# When the Config is stored in the classpath, use following
+#  profiles:
+#    active: native
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: "classpath:/config"
+
+
+# When the Config is stored in the file system , use following
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: "file:///E:\\training tracker microservice latest config\\config"

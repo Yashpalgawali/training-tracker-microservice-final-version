@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+department:
+  message: "Welcome to TrainingTracker department related local API's"
+  contactDetails:
+    name: "Samyak Pagare"
+    email: "samyak@gmail.com"
+  onCallSupport:
+    - (222)- 123456
+    - (222)- 987456

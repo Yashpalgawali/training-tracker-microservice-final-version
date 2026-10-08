@@ -1,0 +1,12 @@
+build:
+  version: "3.0"
+
+company:
+  message: "Welcome to TrainingTracker company related QA API's"
+  contactDetails:
+    name: "Sumedh - QA Lead"
+    email: "sumedh@gmail.com"
+  onCallSupport:
+    - (111)- 123456
+    - (111)- 987456
+

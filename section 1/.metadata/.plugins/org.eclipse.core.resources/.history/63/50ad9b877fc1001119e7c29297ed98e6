@@ -1,0 +1,39 @@
+package com.example.demo.service.impl;
+
+import java.util.List;
+
+import com.example.demo.service.ICompanyService;
+
+public class CompanyServImpl implements ICompanyService {
+
+	@Override
+	public void CompanyDto(com.example.demo.dto.CompanyDto companyDto) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public com.example.demo.dto.CompanyDto getCompanyById(Long companyId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public com.example.demo.dto.CompanyDto getCompanyByName(String companyName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<com.example.demo.dto.CompanyDto> getAllCompanies() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void updateCompanyDto(com.example.demo.dto.CompanyDto companyDto) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
