@@ -12,7 +12,6 @@ spring:
 #        native:
 #          search-locations: "classpath:/config"
 
-
 # When the Config is stored in the file system , use following
 #  profiles:
 #    active: native
@@ -33,4 +32,5 @@ spring:
           force-pull: true
           timeout: 5
           clone-on-start: true
-          
+encrypt:
+  key: 71f5e40479dab264caa95c171402a6b7b0b5bb204f60f4819110189f76fc8362
