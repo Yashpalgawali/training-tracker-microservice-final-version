@@ -1,0 +1,9 @@
+services:
+  company:
+    image: "yashpalgawali/company:v5"
+    container_name: "company-ms"
+    ports:
+      - "7170:7170"
+    extends:
+      file: common-config.yml
+      service: microservice-common-config
