@@ -33,7 +33,6 @@ public class CompanyController {
 	
 	private final CompanyContactInfoDto companyContact;
 	
-
 	@Value(value = "${build.version}")
 	private String buildVersion;
 	
