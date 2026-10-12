@@ -1,9 +1,87 @@
 services:
+  mysql:
+    image: mysql:8.0
+    container_name: "trainingtrackerdb"
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ""
+      retries: 10
+      timeout: 10s
+      interval: 5s
+    extends:
+      file: common-config.yml
+      service: network-deploy-service
+
+  rabbit:
+    image: rabbitmq:3.12-management
+    container_name: "rabbitmq"
+    hostname: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: rabbitmq-diagnostics check_port_connectivity
+      retries: 5
+      timeout: 10s
+      interval: 10s
+    extends:
+      file: common-config.yml
+      service: network-deploy-service
+
+  configserver:
+    image: "yashpalgawali/configserver:v5"
+    container_name: "configserver-ms"
+    ports:
+      - "8071:8071"
+    depends_on:
+      rabbit:
+        condition: service_healthy
+    healthcheck:
+      test: "curl --fail --silent localhost:8071/actuator/health/readiness | grep UP || exit 1"
+      interval: 5s
+      timeout: 10s
+      retries: 10      
+    extends:
+      file: common-config.yml
+      service: microservice-configserver-config
+
   company:
     image: "yashpalgawali/company:v5"
     container_name: "company-ms"
     ports:
       - "7170:7170"
+    depends_on:
+      configserver:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: "company"
     extends:
       file: common-config.yml
-      service: microservice-common-config
+      service: microservice-configserver-config
+
+  department:
+    image: "yashpalgawali/department:v5"
+    container_name: "department-ms"
+    ports:
+      - "7270:7270"
+    environment:
+      SPRING_APPLICATION_NAME: department
+    extends:
+      file: common-config.yml
+      service: microservice-configserver-config
+
+  designation:
+    image: "yashpalgawali/designation:v5"
+    container_name: "designation-ms"
+    ports:
+      - "7370:7370"
+    environment:
+      SPRING_APPLICATION_NAME: department
+    extends:
+      file: common-config.yml
+      service: microservice-configserver-config
+
+networks: 
+  trainingtracker:
+    driver: "bridge"

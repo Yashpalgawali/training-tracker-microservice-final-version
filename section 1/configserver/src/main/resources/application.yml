@@ -46,6 +46,15 @@ management:
     web:
       exposure:
         include: "*"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
 
 encrypt:
   key: 71f5e40479dab264caa95c171402a6b7b0b5bb204f60f4819110189f76fc8362

@@ -1,0 +1,23 @@
+services:
+  network-deploy-service:
+    networks:
+      - trainingtracker
+
+  microservice-base-config:
+    extends:
+      network-deploy-service
+    deploy:
+      resources:
+        limits:
+          memory: 300m
+
+  microservice-configserver-config:
+    extends:
+      microservice-base-config
+    depends_on:
+      rabbit:
+        condition: service_healthy
+    environment:
+      SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
+      SPRING_PROFILES_ACTIVE: "prod"
+  

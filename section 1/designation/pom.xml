@@ -145,7 +145,7 @@
 				<configuration>
 					<to>
 						<image>
-							yashpalgawali/trainingtracker_microservice/${project.artifactId}:v5</image>
+							yashpalgawali/${project.artifactId}:v5</image>
 					</to>
 				</configuration>
 			</plugin>
