@@ -90,6 +90,21 @@ services:
       file: common-config.yml
       service: microservice-configserver-config
 
+  committee:
+    image: "yashpalgawali/committee:v5"
+    container_name: "committee-ms"
+    ports:
+      - "7470:7470"
+    depends_on:
+      trainingtrackerdb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: "committee"
+    extends:
+      file: common-config.yml
+      service: microservice-configserver-config
 networks: 
   trainingtracker:
     driver: "bridge"
