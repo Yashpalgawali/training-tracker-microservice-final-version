@@ -36,7 +36,7 @@ spring:
           clone-on-start: true
 
   rabbitmq:
-    host: "localhost"
+    host: localhost
     port: 5672
     username: guest
     password: guest

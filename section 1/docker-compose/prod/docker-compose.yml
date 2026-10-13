@@ -1,17 +1,12 @@
 services:
-  mysql:
-    image: mysql:8.0
+  trainingtrackerdb:
+    image: mysql
     container_name: "trainingtrackerdb"
     ports:
       - "3306:3306"
-    healthcheck:
-      test: ""
-      retries: 10
-      timeout: 10s
-      interval: 5s
     extends:
       file: common-config.yml
-      service: network-deploy-service
+      service: microservice-database-config
 
   rabbit:
     image: rabbitmq:3.12-management
@@ -39,12 +34,13 @@ services:
         condition: service_healthy
     healthcheck:
       test: "curl --fail --silent localhost:8071/actuator/health/readiness | grep UP || exit 1"
-      interval: 5s
-      timeout: 10s
-      retries: 10      
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
     extends:
       file: common-config.yml
-      service: microservice-configserver-config
+      service: microservice-base-config
 
   company:
     image: "yashpalgawali/company:v5"
@@ -52,6 +48,8 @@ services:
     ports:
       - "7170:7170"
     depends_on:
+      trainingtrackerdb:
+        condition: service_healthy
       configserver:
         condition: service_healthy
     environment:
@@ -65,6 +63,11 @@ services:
     container_name: "department-ms"
     ports:
       - "7270:7270"
+    depends_on:
+      trainingtrackerdb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
     environment:
       SPRING_APPLICATION_NAME: department
     extends:
@@ -76,6 +79,11 @@ services:
     container_name: "designation-ms"
     ports:
       - "7370:7370"
+    depends_on:
+      trainingtrackerdb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
     environment:
       SPRING_APPLICATION_NAME: department
     extends:
