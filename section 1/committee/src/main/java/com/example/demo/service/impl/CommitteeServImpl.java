@@ -62,7 +62,8 @@ public class CommitteeServImpl implements ICommitteeService {
 	public List<CommitteeDto> getAllCommittees() {
 		
 		var list = committeerepo.findAll();
-		if(list.size() < 0) {
+
+		if(list.size() == 0) {
 			throw new ResourceNotFoundException("Committee", "Name", null);
 		}
 		
