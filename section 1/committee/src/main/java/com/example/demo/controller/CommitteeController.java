@@ -30,7 +30,7 @@ public class CommitteeController {
 
 	private final ICommitteeService committeeServ;
 
-	private CommitteeContactInfoDto committeeContactDto;
+	private final CommitteeContactInfoDto committeeContactDto;
 
 	@Value("${build.version}")
 	private String buildVersion;

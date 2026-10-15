@@ -24,7 +24,6 @@ services:
       start_period: 10s
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: trainingtrackerdb
 
   microservice-configserver-config:
     extends:

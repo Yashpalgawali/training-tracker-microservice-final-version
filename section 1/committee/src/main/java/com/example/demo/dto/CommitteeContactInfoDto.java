@@ -9,7 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@ConfigurationProperties(prefix = "company")
+@ConfigurationProperties(prefix = "committee")
 @Data @AllArgsConstructor @NoArgsConstructor
 public class CommitteeContactInfoDto {
 

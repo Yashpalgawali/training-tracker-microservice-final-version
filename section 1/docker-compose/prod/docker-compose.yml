@@ -7,6 +7,15 @@ services:
     extends:
       file: common-config.yml
       service: microservice-database-config
+#    healthcheck:
+#      test: ["CMD","mysqladmin","ping","-h","localhost"]
+#      retries: 25
+#      timeout: 10s
+#      interval: 10s
+#      start_period: 10s
+#    environment:
+#      MYSQL_ROOT_PASSWORD: root
+#      MYSQL_DATABASE: trainingtrackerdb
 
   rabbit:
     image: rabbitmq:3.12-management
