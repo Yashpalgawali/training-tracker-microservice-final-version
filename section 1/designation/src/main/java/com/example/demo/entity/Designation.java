@@ -18,7 +18,7 @@ import lombok.experimental.FieldDefaults;
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Designation {
+public class Designation extends BaseEntity{
 
 	@Id
 	@SequenceGenerator(name="designation_seq", allocationSize = 1, initialValue = 1)

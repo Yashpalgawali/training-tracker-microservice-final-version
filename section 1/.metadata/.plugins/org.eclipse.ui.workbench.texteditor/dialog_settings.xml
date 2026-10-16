@@ -5,13 +5,17 @@
 		<item key="DIALOG_Y_ORIGIN" value="306"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="test"/>
+		<item key="selection" value="trainingtrackerdb"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="trainingtrackerdb"/>
+			<item value="microservice-database-config"/>
+			<item value="trainingtrackerdb&apos;"/>
+			<item value="designationContact"/>
 			<item value="webmv"/>
 			<item value="test"/>
 		</list>

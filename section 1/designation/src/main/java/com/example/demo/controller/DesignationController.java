@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,13 +23,13 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping(value = "api")
+@RequestMapping(value = "api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @RequiredArgsConstructor
 public class DesignationController {
 
 	private final IDesignationService desigserv;
 	
-	private final DesignationContactInfoDto designationContact;
+	private final DesignationContactInfoDto designationContactInfo;
 	
 	@Value(value = "${build.version}")
 	private String buildVersion;
@@ -69,9 +70,9 @@ public class DesignationController {
 	}
 	
 	@GetMapping("/contact-info")
-	public ResponseEntity<DesignationContactInfoDto> getDesignationContact() {
+	public ResponseEntity<DesignationContactInfoDto> getDesignationContactInfo() {
 		
-		return  ResponseEntity.ok(designationContact);
+		return  ResponseEntity.ok(designationContactInfo);
 	}
 	
 	@GetMapping("/build-info")

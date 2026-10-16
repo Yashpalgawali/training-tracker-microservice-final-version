@@ -5,7 +5,7 @@ services:
 
   microservice-base-config:
     extends:
-      network-deploy-service
+      service: network-deploy-service
     deploy:
       resources:
         limits:
@@ -13,27 +13,31 @@ services:
     environment:
       SPRING_RABBITMQ_HOST: "rabbit"
 
-  microservice-database-config:
-    extends:
-      network-deploy-service
-    healthcheck:
-      test: ["CMD","mysqladmin","ping","-h","localhost"]
-      retries: 25
-      timeout: 5s
-      interval: 10s
-      start_period: 10s
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-
   microservice-configserver-config:
     extends:
-      microservice-base-config
-    depends_on:
-      rabbit:
-        condition: service_healthy
+      service: microservice-base-config
     environment:
+      SPRING_PROFILES_ACTIVE: prod
       SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
-      SPRING_PROFILES_ACTIVE: "prod"
-      SPRING_DATASOURCE_URL: "jdbc:mysql://trainingtrackerdb:3306/trainingtrackerdb"
+      SPRING_DATASOURCE_URL: jdbc:mysql://trainingtrackerdb:3306/trainingtrackerdb
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
+
+#  microservice-eureka-config:
+#      extends:
+#        service: microservice-configserver-config
+#      environment:
+#        EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
+
+  microservice-database-config:
+    extends:
+      service: network-deploy-service
+    image: mysql:8.0
+    healthcheck:
+      test: ["CMD","mysqladmin","ping","-h","localhost"]
+      timeout: 10s
+      retries: 25
+      interval: 10s
+      start_period: 5s
+    environment:
+      MYSQL_ROOT_PASSWORD: root

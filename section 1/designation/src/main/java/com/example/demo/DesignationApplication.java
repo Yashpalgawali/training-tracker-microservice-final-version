@@ -13,7 +13,6 @@ import com.example.demo.dto.DesignationContactInfoDto;
 public class DesignationApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DesignationApplication.class, args);		
+		SpringApplication.run(DesignationApplication.class, args);
 	}
-
 }

@@ -1,21 +1,14 @@
 services:
   trainingtrackerdb:
     image: mysql
-    container_name: "trainingtrackerdb"
+    container_name: trainingtrackerdb
     ports:
-      - "3306:3306"
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: trainingtrackerdb
     extends:
       file: common-config.yml
       service: microservice-database-config
-#    healthcheck:
-#      test: ["CMD","mysqladmin","ping","-h","localhost"]
-#      retries: 25
-#      timeout: 10s
-#      interval: 10s
-#      start_period: 10s
-#    environment:
-#      MYSQL_ROOT_PASSWORD: root
-#      MYSQL_DATABASE: trainingtrackerdb
 
   rabbit:
     image: rabbitmq:3.12-management
@@ -78,7 +71,7 @@ services:
       configserver:
         condition: service_healthy
     environment:
-      SPRING_APPLICATION_NAME: department
+      SPRING_APPLICATION_NAME: department      
     extends:
       file: common-config.yml
       service: microservice-configserver-config
@@ -94,7 +87,7 @@ services:
       configserver:
         condition: service_healthy
     environment:
-      SPRING_APPLICATION_NAME: department
+      SPRING_APPLICATION_NAME: designation
     extends:
       file: common-config.yml
       service: microservice-configserver-config
@@ -114,6 +107,7 @@ services:
     extends:
       file: common-config.yml
       service: microservice-configserver-config
+
 networks: 
   trainingtracker:
     driver: "bridge"
