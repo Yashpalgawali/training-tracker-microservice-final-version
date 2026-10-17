@@ -23,9 +23,34 @@ spring:
     host: "localhost"
     username: guest
     password: guest
+  http:
+    serviceclient: 
+      company: 
+        base-url: lb://company
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: "Training Tracker Department Application"
+    version: "1.0.0"
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8070/eureka/
 
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+  endpoint:
+    shutdown:
+      access: unrestricted
+  info:
+    env:
+      enabled: true

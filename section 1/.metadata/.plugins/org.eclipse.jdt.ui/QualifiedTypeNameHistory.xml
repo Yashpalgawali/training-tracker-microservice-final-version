@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="lombok.Value"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.config.server.EnableConfigServer"/>
     <fullyQualifiedTypeName name="com.example.demo.dto.DepartmentContactInfo"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.context.properties.EnableConfigurationProperties"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
@@ -25,7 +23,6 @@
     <fullyQualifiedTypeName name="com.example.demo.service.IDesignationService"/>
     <fullyQualifiedTypeName name="com.example.demo.dto.DesignationDto"/>
     <fullyQualifiedTypeName name="org.apache.hc.core5.http.HttpStatus"/>
-    <fullyQualifiedTypeName name="com.example.demo.dto.DesignationContactInfoDto"/>
     <fullyQualifiedTypeName name="org.springframework.boot.context.properties.ConfigurationProperties"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.config.EnableJpaAuditing"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.example.demo.dto.CommitteeContactInfoDto"/>
     <fullyQualifiedTypeName name="org.springframework.validation.annotation.Validated"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.context.properties.EnableConfigurationProperties"/>
+    <fullyQualifiedTypeName name="com.example.demo.dto.DesignationContactInfoDto"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.server.EnableEurekaServer"/>
 </qualifiedTypeNameHistroy>

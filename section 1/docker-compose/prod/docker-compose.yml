@@ -44,6 +44,24 @@ services:
       file: common-config.yml
       service: microservice-base-config
 
+  eurekaserver:
+    image: "yashpalgawali/eurekaserver:v5"
+    container_name: "eurekaserver-ms"
+    ports:
+      - "8070"
+    healthcheck:
+      test: [ "CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/8070 && printf 'GET /actuator/health/readiness HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3 && grep -q '\"status\":\"UP\"' <&3" ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+    depends_on:
+      configserver:
+        condition: service_healthy
+    extends:
+      file: common-config.yml
+      service: microservice-configserver-config
+
   company:
     image: "yashpalgawali/company:v5"
     container_name: "company-ms"
@@ -54,11 +72,13 @@ services:
         condition: service_healthy
       configserver:
         condition: service_healthy
+      eurekaserver:
+        condition: service_healthy		
     environment:
       SPRING_APPLICATION_NAME: "company"
     extends:
       file: common-config.yml
-      service: microservice-configserver-config
+      service: microservice-eureka-config
 
   department:
     image: "yashpalgawali/department:v5"
@@ -70,11 +90,13 @@ services:
         condition: service_healthy
       configserver:
         condition: service_healthy
+      eurekaserver:
+        condition: service_healthy		
     environment:
       SPRING_APPLICATION_NAME: department      
     extends:
       file: common-config.yml
-      service: microservice-configserver-config
+      service: microservice-eureka-config
 
   designation:
     image: "yashpalgawali/designation:v5"
@@ -86,11 +108,13 @@ services:
         condition: service_healthy
       configserver:
         condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
     environment:
       SPRING_APPLICATION_NAME: designation
     extends:
       file: common-config.yml
-      service: microservice-configserver-config
+      service: microservice-eureka-config
 
   committee:
     image: "yashpalgawali/committee:v5"
@@ -102,11 +126,13 @@ services:
         condition: service_healthy
       configserver:
         condition: service_healthy
+      eurekaserver:
+        condition: service_healthy		
     environment:
       SPRING_APPLICATION_NAME: "committee"
     extends:
       file: common-config.yml
-      service: microservice-configserver-config
+      service: microservice-eureka-config
 
 networks: 
   trainingtracker:

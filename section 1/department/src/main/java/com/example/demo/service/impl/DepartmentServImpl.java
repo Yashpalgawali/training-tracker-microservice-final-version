@@ -4,8 +4,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.jspecify.annotations.Nullable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.dto.CompanyDto;
 import com.example.demo.dto.DepartmentDto;
 import com.example.demo.entity.Department;
 import com.example.demo.exception.GlobalException;
@@ -14,6 +17,7 @@ import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.mapper.DepartmentMapper;
 import com.example.demo.repository.DepartmentRepository;
 import com.example.demo.service.IDepartmentService;
+import com.example.demo.service.client.CompanyClient;
 
 import lombok.RequiredArgsConstructor;
 
@@ -22,6 +26,8 @@ import lombok.RequiredArgsConstructor;
 public class DepartmentServImpl implements IDepartmentService {
 
 	private final DepartmentRepository deptrepo;
+	
+	private final CompanyClient companyClient;
 
 	@Override
 	public void createDepartment(DepartmentDto departmentDto) {
@@ -48,22 +54,33 @@ public class DepartmentServImpl implements IDepartmentService {
 		}
 		return list.stream().map(dept -> {
 
-			return DepartmentMapper.mapToDepartmentDto(dept, new DepartmentDto());
-//			DepartmentDto dto = new DepartmentDto();
-//
-//			dto.setDepartmentId(dept.getDepartmentId());
-//			dto.setDepartmentName(dept.getDepartmentName());
-//			dto.setCompanyId(dept.getCompanyId());
-//			return dto;
+			ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(dept.getCompanyId());
+
+			@Nullable
+			CompanyDto body = companyById.getBody();
+			dept.setCompanyId(body.getCompanyId());
+
+			DepartmentDto mappedDto =  DepartmentMapper.mapToDepartmentDto(dept, new DepartmentDto());
+			mappedDto.setCompanyName(body.getCompanyName());
+
+			return mappedDto;
 
 		}).collect(Collectors.toList());
-
 	}
 
 	@Override
 	public DepartmentDto getDepartmentbyId(Long deptId) {
 		Department found = deptrepo.findById(deptId).orElseThrow(() -> new ResourceNotFoundException("Department", "ID", String.valueOf(deptId)));
-		return DepartmentMapper.mapToDepartmentDto( found, new DepartmentDto());
+		
+		ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(found.getCompanyId());
+
+		@Nullable
+		CompanyDto body = companyById.getBody();
+		DepartmentDto mappedDto =  DepartmentMapper.mapToDepartmentDto(found, new DepartmentDto());
+		mappedDto.setCompanyId(body.getCompanyId());
+		mappedDto.setCompanyName(body.getCompanyName());
+		
+		return mappedDto;
 	}
 
 	@Override
@@ -74,8 +91,18 @@ public class DepartmentServImpl implements IDepartmentService {
 		}
 		
 		return deptList.stream().map(dept-> {			
-			return DepartmentMapper.mapToDepartmentDto(dept, new DepartmentDto());			
-		}).collect(Collectors.toList());		 
+			ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(dept.getCompanyId());
+
+			@Nullable
+			CompanyDto body = companyById.getBody();
+			System.err.println("the company result is "+body.toString());
+			dept.setCompanyId(body.getCompanyId());
+
+			DepartmentDto mappedDto =  DepartmentMapper.mapToDepartmentDto(dept, new DepartmentDto());
+			mappedDto.setCompanyName(body.getCompanyName());
+
+			return mappedDto;			
+		}).collect(Collectors.toList());
 	}
 
 	@Override
