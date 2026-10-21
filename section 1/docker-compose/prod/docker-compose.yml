@@ -80,41 +80,41 @@ services:
       file: common-config.yml
       service: microservice-eureka-config
 
-  company1:
-    image: "yashpalgawali/company:v5"
-    container_name: "company-ms1"
-    ports:
-      - "7171:7170"
-    depends_on:
-      trainingtrackerdb:
-        condition: service_healthy
-      configserver:
-        condition: service_healthy
-      eurekaserver:
-        condition: service_healthy		
-    environment:
-      SPRING_APPLICATION_NAME: "company"
-    extends:
-      file: common-config.yml
-      service: microservice-eureka-config
+#  company1:
+#    image: "yashpalgawali/company:v5"
+#    container_name: "company-ms1"
+#    ports:
+#      - "7171:7170"
+#    depends_on:
+#      trainingtrackerdb:
+#        condition: service_healthy
+#      configserver:
+#        condition: service_healthy
+#      eurekaserver:
+#        condition: service_healthy		
+#    environment:
+#      SPRING_APPLICATION_NAME: "company"
+#    extends:
+#      file: common-config.yml
+#      service: microservice-eureka-config
 
-  company2:
-    image: "yashpalgawali/company:v5"
-    container_name: "company-ms2"
-    ports:
-      - "7172:7170"
-    depends_on:
-      trainingtrackerdb:
-        condition: service_healthy
-      configserver:
-        condition: service_healthy
-      eurekaserver:
-        condition: service_healthy		
-    environment:
-      SPRING_APPLICATION_NAME: "company"
-    extends:
-      file: common-config.yml
-      service: microservice-eureka-config
+#  company2:
+#    image: "yashpalgawali/company:v5"
+#    container_name: "company-ms2"
+#    ports:
+#      - "7172:7170"
+#    depends_on:
+#      trainingtrackerdb:
+#        condition: service_healthy
+#      configserver:
+#        condition: service_healthy
+#      eurekaserver:
+#        condition: service_healthy		
+#    environment:
+#      SPRING_APPLICATION_NAME: "company"
+#    extends:
+#      file: common-config.yml
+#      service: microservice-eureka-config
 
   department:
     image: "yashpalgawali/department:v5"
@@ -134,41 +134,41 @@ services:
       file: common-config.yml
       service: microservice-eureka-config
 
-  department1:
-    image: "yashpalgawali/department:v5"
-    container_name: "department-ms1"
-    ports:
-      - "7271:7270"
-    depends_on:
-      trainingtrackerdb:
-        condition: service_healthy
-      configserver:
-        condition: service_healthy
-      eurekaserver:
-        condition: service_healthy
-    environment:
-      SPRING_APPLICATION_NAME: department
-    extends:
-      file: common-config.yml
-      service: microservice-eureka-config
+#  department1:
+#    image: "yashpalgawali/department:v5"
+#    container_name: "department-ms1"
+#    ports:
+#      - "7271:7270"
+#    depends_on:
+#      trainingtrackerdb:
+#        condition: service_healthy
+#      configserver:
+#        condition: service_healthy
+#      eurekaserver:
+#        condition: service_healthy
+#    environment:
+#      SPRING_APPLICATION_NAME: department
+#    extends:
+#      file: common-config.yml
+#      service: microservice-eureka-config
 
-  department2:
-    image: "yashpalgawali/department:v5"
-    container_name: "department-ms2"
-    ports:
-      - "7272:7270"
-    depends_on:
-      trainingtrackerdb:
-        condition: service_healthy
-      configserver:
-        condition: service_healthy
-      eurekaserver:
-        condition: service_healthy
-    environment:
-      SPRING_APPLICATION_NAME: department
-    extends:
-      file: common-config.yml
-      service: microservice-eureka-config
+#  department2:
+#    image: "yashpalgawali/department:v5"
+#    container_name: "department-ms2"
+#    ports:
+#      - "7272:7270"
+#    depends_on:
+#      trainingtrackerdb:
+#        condition: service_healthy
+#      configserver:
+#        condition: service_healthy
+#      eurekaserver:
+#        condition: service_healthy
+#    environment:
+#      SPRING_APPLICATION_NAME: department
+#    extends:
+#      file: common-config.yml
+#      service: microservice-eureka-config
 
   designation:
     image: "yashpalgawali/designation:v5"
