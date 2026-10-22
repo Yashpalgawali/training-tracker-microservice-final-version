@@ -2271,3 +2271,180 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2026-10-19 15:06:57,052 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2026-10-19 15:06:57,057 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2026-10-19 15:06:57,060 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\frequency\src\test\resources
+2026-10-21 09:34:15,125 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2026-10-21 09:35:44,189 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 09:35:44,218 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 09:35:44,223 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\frequency\src\test\resources
+2026-10-21 12:05:16,830 [Worker-29: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:gatewayserver:0.0.1-SNAPSHOT @ E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\pom.xml.
+2026-10-21 12:05:19,978 [Worker-29: Import Getting Started Content] WARN  o.a.h.c.p.ResponseProcessCookies - Invalid cookie header: "set-cookie: __cf_bm=f_E.znWmoYZ6lbhdIUXYfkxU7Z9npcTeaiW8fSvJMNs-1792564519.9934728-1.0.1.1-WhZ88cYtuuMbbm0jhpA10.Cd3Xwla.KW7ExCVgWHd39jKjgnkjKMZpaPX8ESKysDEz1itzY02B.X0CZGMHL9_AxCEtR38EHyYwwRQrtdaXfQbIJBWJphnJ7rxpXktp7f; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Wed, 21 Oct 2026 07:05:20 GMT". Invalid 'expires' attribute: Wed, 21 Oct 2026 07:05:20 GMT
+2026-10-21 12:05:19,991 [Worker-29: Import Getting Started Content] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-gateway-server-webflux/5.0.3/spring-cloud-starter-gateway-server-webflux-5.0.3.pom
+2026-10-21 12:05:20,003 [Worker-29: Import Getting Started Content] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-gateway-server-webflux/5.0.3/spring-cloud-starter-gateway-server-webflux-5.0.3.pom
+2026-10-21 12:05:20,171 [Worker-29: Import Getting Started Content] WARN  o.a.h.c.p.ResponseProcessCookies - Invalid cookie header: "set-cookie: __cf_bm=l0eV6_1ssScp859pYan0uWYp31elAAxKD8FefyOHRDI-1792564520.2184358-1.0.1.1-JpZhPVZf5vvNND8cAXmms.qBGNH5TUPWjx0iO1j2FmvHNv8hwKUAGpec3FmS2_aaA5fv40pNo3OQlmV2LvLWqIrnEu_Ht4jyo3LwRMsajdEbun3iCmPrkmNy5hm281_e; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Wed, 21 Oct 2026 07:05:20 GMT". Invalid 'expires' attribute: Wed, 21 Oct 2026 07:05:20 GMT
+2026-10-21 12:05:20,172 [Worker-29: Import Getting Started Content] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-gateway-server-webflux/5.0.3/spring-cloud-gateway-server-webflux-5.0.3.pom
+2026-10-21 12:05:20,200 [Worker-29: Import Getting Started Content] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-gateway-server-webflux/5.0.3/spring-cloud-gateway-server-webflux-5.0.3.pom
+2026-10-21 12:05:26,493 [Worker-29: Import Getting Started Content] WARN  o.a.h.c.p.ResponseProcessCookies - Invalid cookie header: "set-cookie: __cf_bm=T_d.CT1.afrVOwq5Eq6QlY6rRD0Wh8fZRhvQG8jrxws-1792564526.529141-1.0.1.1-6wpqZv9sHfl2CSZtX2xZuExmj0HKOBqZGdTHgA.B11WzAPzgL7JBC2EE8PcZnaA67nmMNRq0a65LMZSLXTBBIW0.fmXHvTVqtguALB_QD3YezYxxzhcplhXYV5uGJUbh; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Wed, 21 Oct 2026 07:05:26 GMT". Invalid 'expires' attribute: Wed, 21 Oct 2026 07:05:26 GMT
+2026-10-21 12:05:26,496 [Worker-29: Import Getting Started Content] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/projectreactor/reactor-test/3.8.7/reactor-test-3.8.7.pom
+2026-10-21 12:05:26,506 [Worker-29: Import Getting Started Content] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/projectreactor/reactor-test/3.8.7/reactor-test-3.8.7.pom
+2026-10-21 12:05:26,853 [Worker-29: Import Getting Started Content] WARN  o.a.h.c.p.ResponseProcessCookies - Invalid cookie header: "set-cookie: __cf_bm=AxHZtU5uU4inQJQ2.Hvml2lS13Lfvy9svlJsXLTeHBo-1792564526.8600626-1.0.1.1-hBfcdbbpwO5t_8zPsRRbJfE.thoqUup3.e7.qVMd9m38fbmY1IEWl3.5wUkL1p7YZCMd3jWJf0cjPg0iqBFQQhYZG9VFjEESIxXzYLW1NvlMq4lyM7ILDriNL1TwCH14; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Wed, 21 Oct 2026 07:05:26 GMT". Invalid 'expires' attribute: Wed, 21 Oct 2026 07:05:26 GMT
+2026-10-21 12:05:26,855 [Worker-29: Import Getting Started Content] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-gateway-server-webflux/5.0.3/spring-cloud-starter-gateway-server-webflux-5.0.3.jar
+2026-10-21 12:05:26,860 [Worker-29: Import Getting Started Content] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-gateway-server-webflux/5.0.3/spring-cloud-starter-gateway-server-webflux-5.0.3.jar
+2026-10-21 12:05:26,922 [BasicRepositoryConnector-repo.maven.apache.org-0-1] WARN  o.a.h.c.p.ResponseProcessCookies - Invalid cookie header: "set-cookie: __cf_bm=UfujcRWMrCC6OMXlLFAI_jTrAWiyEWpkv8Gm_NmFEYk-1792564526.9818115-1.0.1.1-3T_aER1yIteD0BSD0CKW5smyE1yMipJYuYZ7lCi5PDEjh3k8XxCJC5Ip0fpU3HMkaGpQPTK28s3QxOH6H8rkUsPNi1mUZntMnlRDt7zoFLJEoHlqBCQNKTh_2itkOCp4; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Wed, 21 Oct 2026 07:05:26 GMT". Invalid 'expires' attribute: Wed, 21 Oct 2026 07:05:26 GMT
+2026-10-21 12:05:27,063 [BasicRepositoryConnector-repo.maven.apache.org-0-0] WARN  o.a.h.c.p.ResponseProcessCookies - Invalid cookie header: "set-cookie: __cf_bm=qf0N6nM1s7yjis8JacN8ysXVg_vgf.ahDuenPJeGsbI-1792564526.9516501-1.0.1.1-er4cwSmpi.GwxTKpm2tKFfVVqK07SDaagHpiALHdQvMR8GxkMca.0fIjDl2o2uU638HCJvgj1ruqcfifQHBy9O.yfRqPGOs916165Wtr6IU.Jqtjee.gMMjveo0PkgTE; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Wed, 21 Oct 2026 07:05:27 GMT". Invalid 'expires' attribute: Wed, 21 Oct 2026 07:05:27 GMT
+2026-10-21 12:05:27,069 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-gateway-server-webflux/5.0.3/spring-cloud-gateway-server-webflux-5.0.3.jar
+2026-10-21 12:05:27,069 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/projectreactor/reactor-test/3.8.7/reactor-test-3.8.7.jar
+2026-10-21 12:05:27,085 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/projectreactor/reactor-test/3.8.7/reactor-test-3.8.7.jar
+2026-10-21 12:05:27,118 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-gateway-server-webflux/5.0.3/spring-cloud-gateway-server-webflux-5.0.3.jar
+2026-10-21 12:05:32,590 [Worker-30: Download sources and javadoc] WARN  o.a.h.c.p.ResponseProcessCookies - Invalid cookie header: "set-cookie: __cf_bm=f.3d2vLOc0R2_TIq3uHhsdtJ.v4s7XRj1huL7zS4drQ-1792564532.6203306-1.0.1.1-EeVF1caYwhTTAFZdH7iCT9WpRWvxBHSKlu3Rw.l5h2Zy3dDYUYXp9IP8qbBR2rrRWQEkRiv7P4iBpCi4IkqV7yuAxx.r.58VwmpqB.CrNGkVuXdu0tt55MJzM3jM894r; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Wed, 21 Oct 2026 07:05:32 GMT". Invalid 'expires' attribute: Wed, 21 Oct 2026 07:05:32 GMT
+2026-10-21 12:05:32,592 [Worker-30: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-gateway-server-webflux/5.0.3/spring-cloud-starter-gateway-server-webflux-5.0.3-sources.jar
+2026-10-21 12:05:32,597 [Worker-30: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for org.springframework.cloud:spring-cloud-starter-gateway-server-webflux:5.0.3
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springframework.cloud:spring-cloud-starter-gateway-server-webflux:jar:sources:5.0.3
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2026-10-21 12:05:32,742 [Worker-30: Download sources and javadoc] WARN  o.a.h.c.p.ResponseProcessCookies - Invalid cookie header: "set-cookie: __cf_bm=YDLN6uPGfC4KaS9U7pk787kLSDyex10pUc35AfZNHI0-1792564532.7995293-1.0.1.1-A_GJgCMxe9AvYbTLm51ET0KnZ0Oxp53I4oDiQcEmsN8QeZcqyWq3z.MLz7qa05tYP7VIAk9s0pQdJMVG_ZBEDuPLnd8euCTMQcOJO9LRWk7FiDR13_q.7CVX2qQnuvHp; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Wed, 21 Oct 2026 07:05:32 GMT". Invalid 'expires' attribute: Wed, 21 Oct 2026 07:05:32 GMT
+2026-10-21 12:05:32,756 [Worker-30: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-gateway-server-webflux/5.0.3/spring-cloud-gateway-server-webflux-5.0.3-sources.jar
+2026-10-21 12:05:32,787 [Worker-30: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-gateway-server-webflux/5.0.3/spring-cloud-gateway-server-webflux-5.0.3-sources.jar
+2026-10-21 12:05:32,792 [Worker-30: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.cloud:spring-cloud-gateway-server-webflux:5.0.3
+2026-10-21 12:05:33,645 [Worker-29: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /gatewayserver/src/main/java
+2026-10-21 12:05:33,647 [Worker-29: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /gatewayserver/src/main/resources
+2026-10-21 12:05:33,652 [Worker-29: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /gatewayserver/src/main/resources
+2026-10-21 12:05:33,655 [Worker-29: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /gatewayserver/src/test/java
+2026-10-21 12:05:33,656 [Worker-29: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /gatewayserver/src/test/resources
+2026-10-21 12:05:34,742 [Worker-29: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 27 sec
+2026-10-21 12:05:34,745 [Worker-29: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2026-10-21 12:05:35,145 [Worker-29: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:gatewayserver:0.0.1-SNAPSHOT @ E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\pom.xml.
+2026-10-21 12:05:38,137 [Worker-29: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /gatewayserver/src/main/java
+2026-10-21 12:05:38,138 [Worker-29: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /gatewayserver/src/main/resources
+2026-10-21 12:05:38,139 [Worker-29: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /gatewayserver/src/main/resources
+2026-10-21 12:05:38,140 [Worker-29: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /gatewayserver/src/test/java
+2026-10-21 12:05:38,140 [Worker-29: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /gatewayserver/src/test/resources
+2026-10-21 12:05:38,715 [Worker-29: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 3.00 sec, update config takes 0.00 sec 
+2026-10-21 12:05:39,325 [Worker-32: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2026-10-21 12:05:39,671 [Worker-32: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:gatewayserver:0.0.1-SNAPSHOT @ E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\pom.xml.
+2026-10-21 12:05:40,147 [Worker-31: Download sources and javadoc] WARN  o.a.h.c.p.ResponseProcessCookies - Invalid cookie header: "set-cookie: __cf_bm=J5XpeWInpnUS387IWnhNGqx6TWL4tYFV1sco1tVrBT4-1792564540.2101645-1.0.1.1-3Lc0nBdILbnD0EsfCuhseU1u2WyIHFh29KN_Vw6hwZCbuLco2Haa1.eiqVnkY9Deiqf_mwwkg2orAnzPXWx4A8CSm6wC7UdAsiBSVJInlZzQizouzEimBxZw1.LsYsy8; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Wed, 21 Oct 2026 07:05:40 GMT". Invalid 'expires' attribute: Wed, 21 Oct 2026 07:05:40 GMT
+2026-10-21 12:05:40,149 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/projectreactor/reactor-test/3.8.7/reactor-test-3.8.7-sources.jar
+2026-10-21 12:05:40,219 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/projectreactor/reactor-test/3.8.7/reactor-test-3.8.7-sources.jar
+2026-10-21 12:05:40,224 [Worker-31: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.projectreactor:reactor-test:3.8.7
+2026-10-21 12:05:41,029 [Worker-32: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /gatewayserver/src/main/java
+2026-10-21 12:05:41,030 [Worker-32: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /gatewayserver/src/main/resources
+2026-10-21 12:05:41,031 [Worker-32: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /gatewayserver/src/main/resources
+2026-10-21 12:05:41,031 [Worker-32: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /gatewayserver/src/test/java
+2026-10-21 12:05:41,032 [Worker-32: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /gatewayserver/src/test/resources
+2026-10-21 12:05:41,740 [Worker-32: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 1.00 sec, update config takes 0.00 sec 
+2026-10-21 12:05:42,592 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 12:05:42,605 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:05:42,615 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 12:05:43,295 [Worker-31: Download sources and javadoc] WARN  o.a.h.c.p.ResponseProcessCookies - Invalid cookie header: "set-cookie: __cf_bm=RaqEYK64wNxTJbsUTETT3VfJUsgg5Pr7rKKfGUP1Tes-1792564543.2933297-1.0.1.1-FUUTicTQQDGcRtur0RLsAaamE9Vw28v4RZNI_toag3o.1RsLTYtdSGMoAFjygG7XURkGVKObafOtovaKgHbppeIegJBM4PNaL551rm5LCBhmtLOAdzSyIsT.ODAOkl3g; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Wed, 21 Oct 2026 07:05:43 GMT". Invalid 'expires' attribute: Wed, 21 Oct 2026 07:05:43 GMT
+2026-10-21 12:05:43,296 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-gateway-server-webflux/5.0.3/spring-cloud-starter-gateway-server-webflux-5.0.3-javadoc.jar
+2026-10-21 12:05:43,298 [Worker-31: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for org.springframework.cloud:spring-cloud-starter-gateway-server-webflux:5.0.3
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springframework.cloud:spring-cloud-starter-gateway-server-webflux:jar:javadoc:5.0.3
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2026-10-21 12:06:28,634 [Worker-28: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:gatewayserver:0.0.1-SNAPSHOT @ E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\pom.xml.
+2026-10-21 12:06:31,554 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:06:31,555 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:06:31,560 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 12:06:46,445 [Worker-31: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:gatewayserver:0.0.1-SNAPSHOT @ E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\pom.xml.
+2026-10-21 12:06:47,592 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:06:47,593 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:06:47,597 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 12:07:35,545 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 12:07:35,560 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:07:35,563 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 12:08:20,757 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 12:08:20,762 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:08:20,765 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 12:10:41,003 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 12:10:41,009 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:10:41,013 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 12:16:34,403 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 12:16:34,409 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:16:34,413 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 12:29:17,721 [Worker-36: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:designation:0.0.1-SNAPSHOT @ E:\Savera Microservices\TrainingTracker Final Microservices\section 1\designation\pom.xml.
+2026-10-21 12:29:19,269 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 12:29:19,317 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:29:19,321 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\designation\src\test\resources
+2026-10-21 12:29:21,526 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 12:29:21,541 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:29:21,544 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\designation\src\test\resources
+2026-10-21 12:29:42,600 [Worker-59: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:frequency:0.0.1-SNAPSHOT @ E:\Savera Microservices\TrainingTracker Final Microservices\section 1\frequency\pom.xml.
+2026-10-21 12:29:43,697 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:29:43,697 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:29:43,701 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\frequency\src\test\resources
+2026-10-21 12:29:45,131 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 12:29:45,158 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 12:29:45,161 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\frequency\src\test\resources
+2026-10-21 14:48:26,587 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 14:48:26,589 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 14:48:26,592 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 14:50:44,815 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 14:50:44,849 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 14:50:44,851 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 14:54:24,799 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 14:54:24,808 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 14:54:24,814 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 14:57:34,549 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 14:57:34,555 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 14:57:34,558 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 15:02:13,793 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 15:02:13,798 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 15:02:13,801 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 15:07:37,696 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 15:07:37,702 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 15:07:37,705 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 15:19:03,521 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 15:19:03,528 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 15:19:03,531 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 15:23:17,821 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 15:23:17,830 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 15:23:17,833 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 15:24:28,568 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 15:24:28,574 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 15:24:28,577 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 15:29:55,067 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 15:29:55,073 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 15:29:55,076 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 15:31:06,062 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 15:31:06,073 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 15:31:06,076 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 15:37:44,751 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 15:37:44,765 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 15:37:44,768 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 16:36:06,529 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 16:36:06,563 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 16:36:06,566 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 16:37:35,918 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 16:37:35,923 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 16:37:35,926 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\gatewayserver\src\test\resources
+2026-10-21 16:38:02,568 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-10-21 16:38:02,586 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-10-21 16:38:02,591 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Savera Microservices\TrainingTracker Final Microservices\section 1\company\src\test\resources

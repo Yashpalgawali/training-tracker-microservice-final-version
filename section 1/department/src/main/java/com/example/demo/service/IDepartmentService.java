@@ -10,9 +10,9 @@ public interface IDepartmentService {
 	
 	public List<DepartmentDto> getAllDepartments();
 	
-	public DepartmentDto getDepartmentbyId(Long deptId);
+	public DepartmentDto getDepartmentbyId(String correlationId, Long deptId);
 	
-	public List<DepartmentDto> getDepartmentbyCompanyId(Long companyId);
+	public List<DepartmentDto> getDepartmentbyCompanyId(String correlationId, Long companyId);
 	
 	public void updateDepartment(DepartmentDto departmentDto);
 }

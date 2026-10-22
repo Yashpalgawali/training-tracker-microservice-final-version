@@ -45,22 +45,22 @@ public class CompanyServImpl implements ICompanyService {
 	}
 
 	@Override
-	public CompanyDto getCompanyById(Long companyId) {
+	public CompanyDto getCompanyById(String correlationId, Long companyId) {
 		
-		Company result = comprepo.findById(companyId).orElseThrow(()-> new ResourceAlreadyExistsException("Company", "ID", String.valueOf(companyId)));
+		Company result = comprepo.findById(companyId).orElseThrow(()-> new ResourceNotFoundException("Company", "ID", String.valueOf(companyId)));
 		return CompanyMapper.mapToCompanyDto(result, new CompanyDto());
 	}
 
 	@Override
-	public CompanyDto getCompanyByName(String companyName) {
-		Company result = comprepo.findByCompanyName(companyName).orElseThrow(()-> new ResourceAlreadyExistsException("Company", "ID", companyName));
+	public CompanyDto getCompanyByName(String correlationId, String companyName) {
+		Company result = comprepo.findByCompanyName(companyName).orElseThrow(()-> new ResourceNotFoundException("Company", "Name", companyName));
 		return CompanyMapper.mapToCompanyDto(result, new CompanyDto());
 	}
 
 	@Override
 	public List<CompanyDto> getAllCompanies() {
 		var list = comprepo.findAll();
-		if(list.size() < 0) {
+		if(list.size() == 0) {
 			throw new ResourceNotFoundException("Company", "List", null);
 		}
 		return list.stream().map(comp-> {

@@ -1,6 +1,8 @@
 spring:
   application:
     name: gatewayserver
+  main:
+    allow-bean-definition-overriding: true
   config:
     import: "optional:configserver:http://localhost:8071/"
   cloud:
@@ -9,7 +11,8 @@ spring:
         webflux:
           discovery:
             locator:
-              enabled: true
+              enabled: false
+              lower-case-service-id: true
   rabbitmq:
     host: localhost
     port: 5672

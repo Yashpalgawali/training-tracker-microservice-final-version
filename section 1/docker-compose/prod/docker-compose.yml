@@ -73,7 +73,13 @@ services:
       configserver:
         condition: service_healthy
       eurekaserver:
-        condition: service_healthy		
+        condition: service_healthy
+    healthcheck:
+      test: "curl --silent --fail http://localhost:7170/actuator/health | grep UP || exit 1"
+      timeout: 5s
+      interval: 5s
+      retries: 15
+      start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: "company"
     extends:
@@ -127,7 +133,13 @@ services:
       configserver:
         condition: service_healthy
       eurekaserver:
-        condition: service_healthy		
+        condition: service_healthy
+    healthcheck:
+      test: "curl --silent --fail http://localhost:7270/actuator/health | grep UP || exit 1"
+      timeout: 5s
+      interval: 5s
+      retries: 15
+      start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: department      
     extends:
@@ -182,6 +194,12 @@ services:
         condition: service_healthy
       eurekaserver:
         condition: service_healthy
+    healthcheck:
+      test: "curl --silent --fail http://localhost:7370/actuator/health | grep UP || exit 1"
+      timeout: 5s
+      interval: 5s
+      retries: 15
+      start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: designation
     extends:
@@ -200,6 +218,12 @@ services:
         condition: service_healthy
       eurekaserver:
         condition: service_healthy
+    healthcheck:
+      test: "curl --silent --fail http://localhost:7470/actuator/health | grep UP || exit 1"
+      timeout: 5s
+      interval: 5s
+      retries: 15
+      start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: "committee"
     extends:
@@ -218,8 +242,41 @@ services:
         condition: service_healthy
       eurekaserver:
         condition: service_healthy
+    healthcheck:
+      test: "curl --silent --fail http://localhost:7570/actuator/health | grep UP || exit 1"
+      timeout: 5s
+      interval: 5s
+      retries: 15
+      start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: "frequency"
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
+
+  gatewayserver:
+    image: "yashpalgawali/gatewayserver:v5"
+    container_name: "gatewayserver-ms"
+    ports:
+      - "8072:8072"
+    restart: always
+    depends_on:
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+      company:
+        condition: service_healthy
+      department:
+        condition: service_healthy
+      designation:
+        condition: service_healthy
+      frequency:
+        condition: service_healthy
+      committee:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: "gatewayserver"
     extends:
       file: common-config.yml
       service: microservice-eureka-config

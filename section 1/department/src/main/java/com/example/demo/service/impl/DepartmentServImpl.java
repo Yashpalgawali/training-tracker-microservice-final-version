@@ -69,7 +69,7 @@ public class DepartmentServImpl implements IDepartmentService {
 	}
 
 	@Override
-	public DepartmentDto getDepartmentbyId(Long deptId) {
+	public DepartmentDto getDepartmentbyId(String correlationId, Long deptId) {
 		Department found = deptrepo.findById(deptId).orElseThrow(() -> new ResourceNotFoundException("Department", "ID", String.valueOf(deptId)));
 		
 		ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(found.getCompanyId());
@@ -84,9 +84,9 @@ public class DepartmentServImpl implements IDepartmentService {
 	}
 
 	@Override
-	public List<DepartmentDto> getDepartmentbyCompanyId(Long companyId) {
+	public List<DepartmentDto> getDepartmentbyCompanyId(String correlationId, Long companyId) {
 		List<Department> deptList = deptrepo.findByCompanyId(companyId);
-		if(deptList.size() <0 ) {
+		if(deptList.size() < 0 ) {
 			throw new ResourceNotFoundException("Department", "Company ID", String.valueOf(companyId));
 		}
 		
@@ -101,7 +101,7 @@ public class DepartmentServImpl implements IDepartmentService {
 			DepartmentDto mappedDto =  DepartmentMapper.mapToDepartmentDto(dept, new DepartmentDto());
 			mappedDto.setCompanyName(body.getCompanyName());
 
-			return mappedDto;			
+			return mappedDto;
 		}).collect(Collectors.toList());
 	}
 

@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dto.CompanyContactInfoDto;
@@ -44,16 +46,16 @@ public class CompanyController {
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<CompanyDto> getCompanyById(@PathVariable Long id) {
+	public ResponseEntity<CompanyDto> getCompanyById(@RequestHeader("trainingtracker-correlation-id") String correlationId,  @PathVariable Long id) {
 		
-		CompanyDto company = compserv.getCompanyById(id);
+		CompanyDto company = compserv.getCompanyById(correlationId,id);
 		return ResponseEntity.status(HttpStatus.OK).body(company);
 	}
 	
 	@GetMapping("/name/{name}")
-	public ResponseEntity<CompanyDto> getCompanyByName(@PathVariable String name) {
+	public ResponseEntity<CompanyDto> getCompanyByName(@RequestHeader("trainingtracker-correlation-id") String correlationId, @PathVariable String name) {
 		
-		CompanyDto company = compserv.getCompanyByName(name);
+		CompanyDto company = compserv.getCompanyByName(correlationId,name);
 		return ResponseEntity.status(HttpStatus.OK).body(company);
 	}
 	
@@ -61,7 +63,7 @@ public class CompanyController {
 	public ResponseEntity<List<CompanyDto>> getAllCompanies() {
 		
 		var list = compserv.getAllCompanies();
-		return ResponseEntity.status(HttpStatus.CREATED).body(list);
+		return ResponseEntity.status(HttpStatus.OK).body(list);
 	}
 
 	@PutMapping("/")

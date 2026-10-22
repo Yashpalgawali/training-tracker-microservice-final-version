@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dto.DepartmentContactInfo;
@@ -40,8 +42,8 @@ public class DepartmentController {
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<DepartmentDto> getDepartmentById(@PathVariable Long id) {
-		var dept = deptserv.getDepartmentbyId(id);
+	public ResponseEntity<DepartmentDto> getDepartmentById(@RequestHeader("trainingtracker-correlation-id")  String correlationId,@PathVariable Long id) {
+		var dept = deptserv.getDepartmentbyId(correlationId,id);
 		return ResponseEntity.status(HttpStatus.OK).body(dept);
 	}
 	
@@ -52,8 +54,8 @@ public class DepartmentController {
 	}
 	
 	@GetMapping("/company/{companyid}")
-	public ResponseEntity<List<DepartmentDto>> getDepartmentByCompanyId(@PathVariable Long companyid) {
-		var dept = deptserv.getDepartmentbyCompanyId(companyid);
+	public ResponseEntity<List<DepartmentDto>> getDepartmentByCompanyId(@RequestHeader("trainingtracker-correlation-id")  String correlationId,@PathVariable Long companyid) {
+		var dept = deptserv.getDepartmentbyCompanyId(correlationId,companyid);
 		return ResponseEntity.status(HttpStatus.OK).body(dept);
 	}
 	

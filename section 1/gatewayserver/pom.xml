@@ -98,8 +98,7 @@
 				<version>3.5.2</version>
 				<configuration>
 					<to>
-						<image>
-							yashpalgawali/${project.artifactId}:v5</image>
+						<image>yashpalgawali/${project.artifactId}:v5</image>
 					</to>
 				</configuration>
 			</plugin>
