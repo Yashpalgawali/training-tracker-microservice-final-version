@@ -99,7 +99,7 @@ public class DepartmentServImpl implements IDepartmentService {
 			throw new ResourceNotFoundException("Department", "Company ID", String.valueOf(companyId));
 		}
 		
-		return deptList.stream().map(dept-> {			
+		return deptList.stream().map(dept-> {
 			ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(correlationId,dept.getCompanyId());
 
 			@Nullable
