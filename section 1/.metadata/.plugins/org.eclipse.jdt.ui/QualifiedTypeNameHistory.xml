@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="jakarta.persistence.SequenceGenerator"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
-    <fullyQualifiedTypeName name="lombok.Data"/>
-    <fullyQualifiedTypeName name="jakarta.validation.constraints.Size"/>
-    <fullyQualifiedTypeName name="jakarta.validation.constraints.NotBlank"/>
-    <fullyQualifiedTypeName name="com.example.demo.repository.DesignationRepository"/>
     <fullyQualifiedTypeName name="com.example.demo.service.impl.DesigantionServImpl"/>
     <fullyQualifiedTypeName name="com.example.demo.entity.Designation"/>
     <fullyQualifiedTypeName name="com.example.demo.mapper.DesignationMapper"/>
@@ -60,4 +54,10 @@
     <fullyQualifiedTypeName name="org.springframework.cloud.gateway.route.RouteLocator"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpHeaders"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestHeader"/>
 </qualifiedTypeNameHistroy>

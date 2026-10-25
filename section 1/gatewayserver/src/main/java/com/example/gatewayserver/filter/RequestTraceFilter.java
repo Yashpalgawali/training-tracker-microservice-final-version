@@ -1,4 +1,4 @@
-package com.example.demo.filters;
+package com.example.gatewayserver.filter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +9,6 @@ import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
-
 import reactor.core.publisher.Mono;
 
 @Order(1)

@@ -1,4 +1,4 @@
-package com.example.demo.filters;
+package com.example.gatewayserver.filter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,7 +7,6 @@ import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
-
 import reactor.core.publisher.Mono;
 
 @Configuration
@@ -25,8 +24,9 @@ public class ResponseTraceFilter {
                 HttpHeaders requestHeaders = exchange.getRequest().getHeaders();
                 String correlationId = filterUtility.getCorrelationId(requestHeaders);
                 logger.debug("Updated the correlation id to the outbound headers: {}", correlationId);
-                exchange.getResponse().getHeaders().add(FilterUtility.CORRELATION_ID, correlationId);
+                exchange.getResponse().getHeaders().add(filterUtility.CORRELATION_ID, correlationId);
             }));
         };
     }
+
 }

@@ -51,3 +51,10 @@ management:
   info:
     env:
       enabled: true
+
+logging:
+  level:
+    com:
+      example:
+        demo:
+          company: DEBUG

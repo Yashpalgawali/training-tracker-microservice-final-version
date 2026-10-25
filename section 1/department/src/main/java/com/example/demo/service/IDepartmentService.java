@@ -8,7 +8,7 @@ public interface IDepartmentService {
 
 	public void createDepartment(DepartmentDto departmentDto);
 	
-	public List<DepartmentDto> getAllDepartments();
+	public List<DepartmentDto> getAllDepartments(String correlationId);
 	
 	public DepartmentDto getDepartmentbyId(String correlationId, Long deptId);
 	

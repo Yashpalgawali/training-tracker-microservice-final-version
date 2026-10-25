@@ -4,17 +4,18 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import com.example.demo.repository.CompanyRepository;
-import com.example.demo.service.ICompanyService;
 import com.example.demo.dto.CompanyDto;
 import com.example.demo.entity.Company;
 import com.example.demo.exception.GlobalException;
 import com.example.demo.exception.ResourceAlreadyExistsException;
 import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.mapper.CompanyMapper;
+import com.example.demo.repository.CompanyRepository;
+import com.example.demo.service.ICompanyService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -24,6 +25,8 @@ public class CompanyServImpl implements ICompanyService {
 
 	private final CompanyRepository comprepo;
 	
+	private final Logger logger = LoggerFactory.getLogger(CompanyServImpl.class);
+		
 	@Override
 	public void createCompany(CompanyDto companyDto) {
 		
@@ -46,13 +49,15 @@ public class CompanyServImpl implements ICompanyService {
 
 	@Override
 	public CompanyDto getCompanyById(String correlationId, Long companyId) {
-		
+		logger.info("CorrelationID in Company service {} ", correlationId);
 		Company result = comprepo.findById(companyId).orElseThrow(()-> new ResourceNotFoundException("Company", "ID", String.valueOf(companyId)));
 		return CompanyMapper.mapToCompanyDto(result, new CompanyDto());
 	}
 
 	@Override
 	public CompanyDto getCompanyByName(String correlationId, String companyName) {
+		logger.info("CorrelationID in Company service {} ", correlationId);
+				
 		Company result = comprepo.findByCompanyName(companyName).orElseThrow(()-> new ResourceNotFoundException("Company", "Name", companyName));
 		return CompanyMapper.mapToCompanyDto(result, new CompanyDto());
 	}
@@ -75,7 +80,7 @@ public class CompanyServImpl implements ICompanyService {
 	public void updateCompany(CompanyDto companyDto) {
 		if(companyDto.getCompanyName()=="") {
 			throw new GlobalException("Company name can't be blank");
-		}		 
+		}
 		Company mappedCompany = CompanyMapper.mapToCompany(companyDto, new Company());
 		Company savedCompany = comprepo.save(mappedCompany);
 		if(savedCompany==null) {

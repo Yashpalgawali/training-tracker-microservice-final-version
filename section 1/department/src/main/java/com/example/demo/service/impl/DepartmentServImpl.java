@@ -5,6 +5,8 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.jspecify.annotations.Nullable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +31,8 @@ public class DepartmentServImpl implements IDepartmentService {
 	
 	private final CompanyClient companyClient;
 
+	private final Logger logger = LoggerFactory.getLogger(DepartmentServImpl.class);
+	 
 	@Override
 	public void createDepartment(DepartmentDto departmentDto) {
 
@@ -47,14 +51,15 @@ public class DepartmentServImpl implements IDepartmentService {
 	}
 
 	@Override
-	public List<DepartmentDto> getAllDepartments() {
+	public List<DepartmentDto> getAllDepartments(String correlationId) {
+		logger.info("CorrelationID in department service {} ", correlationId);
 		var list = deptrepo.findAll();
 		if (list.size() < 0) {
 			throw new ResourceNotFoundException("Department", "List", null);
 		}
 		return list.stream().map(dept -> {
 
-			ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(dept.getCompanyId());
+			ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(correlationId,dept.getCompanyId());
 
 			@Nullable
 			CompanyDto body = companyById.getBody();
@@ -70,9 +75,10 @@ public class DepartmentServImpl implements IDepartmentService {
 
 	@Override
 	public DepartmentDto getDepartmentbyId(String correlationId, Long deptId) {
+		logger.info("CorrelationID in department service {} ", correlationId);
 		Department found = deptrepo.findById(deptId).orElseThrow(() -> new ResourceNotFoundException("Department", "ID", String.valueOf(deptId)));
 		
-		ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(found.getCompanyId());
+		ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(correlationId,found.getCompanyId());
 
 		@Nullable
 		CompanyDto body = companyById.getBody();
@@ -85,13 +91,16 @@ public class DepartmentServImpl implements IDepartmentService {
 
 	@Override
 	public List<DepartmentDto> getDepartmentbyCompanyId(String correlationId, Long companyId) {
+		
+		logger.info("CorrelationID in department service {} ", correlationId);
+		
 		List<Department> deptList = deptrepo.findByCompanyId(companyId);
 		if(deptList.size() < 0 ) {
 			throw new ResourceNotFoundException("Department", "Company ID", String.valueOf(companyId));
 		}
 		
 		return deptList.stream().map(dept-> {			
-			ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(dept.getCompanyId());
+			ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(correlationId,dept.getCompanyId());
 
 			@Nullable
 			CompanyDto body = companyById.getBody();

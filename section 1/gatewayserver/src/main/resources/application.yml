@@ -1,48 +1,70 @@
 spring:
   application:
     name: gatewayserver
-  main:
-    allow-bean-definition-overriding: true
   config:
     import: "optional:configserver:http://localhost:8071/"
   cloud:
     gateway:
-      server:
-        webflux:
-          discovery:
-            locator:
-              enabled: false
-              lower-case-service-id: true
+      discovery:
+        locator:
+#          enabled: true
+          enabled: false
+          lower-case-service-id: true
+      httpclient:
+        connect-timeout: 1000
+        response-timeout: 10s
+  data:
+    redis:
+      connect-timeout: 2s
+      host: localhost
+      port: 6379
+      timeout: 1s
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: "http://localhost:7080/realms/master/protocol/openid-connect/certs"
+  main:
+    allow-bean-definition-overriding: true
+
   rabbitmq:
-    host: localhost
+    host: "localhost"
     port: 5672
     username: guest
     password: guest
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:8070/eureka/
-
-info:
-  app:
-    name: ${spring.application.name}
-    description: "Training Tracker Gatewayserver Application"
-    version: "1.0.0"
 
 management:
   endpoints:
     web:
       exposure:
-        include: "*"  
+        include: "*"
   endpoint:
     gateway:
       access: unrestricted
-
   info:
     env:
       enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+
+info:
+  app:
+    name: "Gatewayserver"
+    desctiption: "Training Tracker Gatewayserver Microservice"
+    version: "1.0.0"
+
+logging:
+  level:
+    com:
+      example:
+        gatewayserver: debug
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      sliding-window-size: 10
+      permitted-number-of-calls-in-half-open-state: 2
+      failure-rate-threshold: 50
+      wait-duration-in-open-state: 10000

@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +14,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dto.DepartmentContactInfo;
@@ -32,6 +33,8 @@ public class DepartmentController {
 
 	private final DepartmentContactInfo departmentContactInfo;
 	
+	private final Logger logger = LoggerFactory.getLogger(DepartmentController.class);
+	
 	@Value("${build.version}")
 	private String buildVersion;
 	
@@ -43,18 +46,22 @@ public class DepartmentController {
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<DepartmentDto> getDepartmentById(@RequestHeader("trainingtracker-correlation-id")  String correlationId,@PathVariable Long id) {
+		
+		logger.debug("inside getDepartmentById() in department service correlationId {}",correlationId);
 		var dept = deptserv.getDepartmentbyId(correlationId,id);
 		return ResponseEntity.status(HttpStatus.OK).body(dept);
 	}
 	
 	@GetMapping("/")
-	public ResponseEntity<List<DepartmentDto>> getAllDepartments() {
-		var deptList = deptserv.getAllDepartments();
+	public ResponseEntity<List<DepartmentDto>> getAllDepartments(@RequestHeader("trainingtracker-correlation-id")  String correlationId) {
+		logger.debug("inside getDepartmentById() in department service correlationId {}",correlationId);
+		var deptList = deptserv.getAllDepartments(correlationId);
 		return ResponseEntity.status(HttpStatus.OK).body(deptList);
 	}
 	
 	@GetMapping("/company/{companyid}")
 	public ResponseEntity<List<DepartmentDto>> getDepartmentByCompanyId(@RequestHeader("trainingtracker-correlation-id")  String correlationId,@PathVariable Long companyid) {
+		logger.debug("inside getDepartmentById() in department service correlationId {}",correlationId);
 		var dept = deptserv.getDepartmentbyCompanyId(correlationId,companyid);
 		return ResponseEntity.status(HttpStatus.OK).body(dept);
 	}
