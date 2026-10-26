@@ -5,23 +5,25 @@
 		<item key="DIALOG_Y_ORIGIN" value="306"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="trainingtracker-correlation-id"/>
+		<item key="selection" value="trainingtracker"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="eazybank"/>
+			<item value="f05d3684-099c-4712-8e94-bd8446d02ad4"/>
+			<item value="service"/>
+			<item value="orrelation-id:&#x09;f05d3684-099c-4712-8e94-bd8446d02ad4"/>
 			<item value="trainingtracker-correlation-id"/>
 			<item value="designation"/>
 			<item value="trainingtrackerdb"/>
 			<item value="microservice-database-config"/>
 			<item value="trainingtrackerdb&apos;"/>
-			<item value="designationContact"/>
-			<item value="webmv"/>
-			<item value="test"/>
 		</list>
 		<list key="replacehistory">
+			<item value="trainingtracker"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

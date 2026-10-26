@@ -9791,3 +9791,647 @@ java.util.concurrent.TimeoutException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+!SESSION 2026-10-26 09:01:17.788 -----------------------------------------------
+eclipse.buildId=4.24.0.202407191504
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2026-10-26 09:02:17.062
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-10-26 09:08:51.235
+!MESSAGE Logback config file: E:\Savera Microservices\TrainingTracker Final Microservices\section 1\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2026-10-26 09:08:53.124
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-10-26 09:08:53.124
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2026-10-26 09:08:54.500
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-10-26 09:08:54.500
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2026-10-26 09:09:15.128
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\Users\YASHPAL\Desktop\sts-4.24.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.3.v20240426-1530\jre\bin\javaw.exe
+-cp
+C:\Users\YASHPAL\Desktop\sts-4.24.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.56.0.202407191456\servers\spring-boot-language-server\BOOT-INF\classes;C:\Users\YASHPAL\Desktop\sts-4.24.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.56.0.202407191456\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\Users\YASHPAL\Desktop\sts-4.24.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.56.0.202407191456\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=E:/Savera Microservices/TrainingTracker Final Microservices/section 1/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1792985955128
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 09:09:15.129
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2026-10-26 09:09:15.142
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 2480
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-10-26 09:09:23.980
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\YASHPAL'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 09:09:24.269
+!MESSAGE Boot project ADDED: committee
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 09:09:24.269
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 09:09:24.270
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 09:09:24.270
+!MESSAGE Boot project ADDED: company
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 09:09:24.271
+!MESSAGE Boot project ADDED: configserver
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 09:09:24.271
+!MESSAGE Boot project ADDED: department
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 09:09:24.271
+!MESSAGE Boot project ADDED: designation
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 09:09:24.272
+!MESSAGE Boot project ADDED: eurekaserver
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 09:09:24.272
+!MESSAGE Boot project ADDED: frequency
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 09:09:24.272
+!MESSAGE Boot project ADDED: gatewayserver
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-26 09:10:51.141
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 09:15:03.921
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 09:15:03.922
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 09:15:03.923
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 09:15:03.923
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 09:15:03.933
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 09:15:03.937
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-26 09:15:13.541
+!MESSAGE Could not get hover region due to timeout after 1000 milliseconds
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.getHoverRegion(LSPTextHover.java:155)
+	at org.eclipse.ui.internal.genericeditor.hover.CompositeTextHover.getHoverRegion(CompositeTextHover.java:101)
+	at org.eclipse.jface.text.TextViewerHoverManager.computeInformation(TextViewerHoverManager.java:128)
+	at org.eclipse.jface.text.AbstractInformationControlManager.doShowInformation(AbstractInformationControlManager.java:1101)
+	at org.eclipse.jface.text.AbstractHoverInformationControlManager$MouseTracker.mouseHover(AbstractHoverInformationControlManager.java:511)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:225)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4285)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1160)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4083)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:152)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-26 09:15:14.545
+!MESSAGE Could not get hover information due to timeout after 1000 milliseconds
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.getHoverInfo(LSPTextHover.java:76)
+	at org.eclipse.ui.internal.genericeditor.hover.CompositeTextHover.getHoverInfo2(CompositeTextHover.java:60)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-26 10:30:03.798
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jface 2 0 2026-10-26 11:52:44.710
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2026-10-26 11:52:44.710
+!MESSAGE A conflict occurred for CTRL+R:
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.RunToLine,Run to Line,
+		Resume and break when execution reaches the current line,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.debug.ui.commands.RunToLine"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.springframework.ide.eclipse.boot.restart.commands.restart,Trigger Restart,
+		Restart Spring Boot Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.springframework.ide.eclipse.boot.restart.commands.restart"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2026-10-26 12:08:19.725
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2026-10-26 12:08:19.725
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-26 14:13:26.013
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 14:41:12.693
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 14:41:12.695
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 14:41:12.697
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 14:41:12.699
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 14:41:12.715
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 14:41:12.719
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-26 15:18:46.969
+!MESSAGE Could not detect hyperlinks due to timeout after 800 milliseconds
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.declaration.OpenDeclarationHyperlinkDetector.detectHyperlinks(OpenDeclarationHyperlinkDetector.java:70)
+	at org.eclipse.ui.texteditor.HyperlinkDetectorRegistry$HyperlinkDetectorDelegate.detectHyperlinks(HyperlinkDetectorRegistry.java:81)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:289)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:262)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.mouseMove(HyperlinkManager.java:457)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:229)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4285)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1160)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4083)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:152)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.tm4e.ui 4 0 2026-10-26 15:18:52.760
+!MESSAGE Argument not valid
+!STACK 0
+java.lang.IllegalArgumentException: Argument not valid
+	at org.eclipse.swt.SWT.error(SWT.java:4903)
+	at org.eclipse.swt.SWT.error(SWT.java:4837)
+	at org.eclipse.swt.SWT.error(SWT.java:4808)
+	at org.eclipse.swt.custom.StyledText.setStyleRanges(StyledText.java:10181)
+	at org.eclipse.swt.custom.StyledText.replaceStyleRanges(StyledText.java:7727)
+	at org.eclipse.jface.text.TextViewer.addPresentation(TextViewer.java:4782)
+	at org.eclipse.jface.text.TextViewer.changeTextPresentation(TextViewer.java:4859)
+	at org.eclipse.tm4e.ui.text.Colorizer.colorize(Colorizer.java:168)
+	at org.eclipse.tm4e.ui.text.TMPresentationReconciler$TextViewerListener.textChanged(TMPresentationReconciler.java:273)
+	at org.eclipse.jface.text.TextViewer.updateTextListeners(TextViewer.java:2795)
+	at org.eclipse.jface.text.TextViewer.fireRedrawChanged(TextViewer.java:5004)
+	at org.eclipse.jface.text.TextViewer.enabledRedrawing(TextViewer.java:5044)
+	at org.eclipse.jface.text.TextViewer.enabledRedrawing(TextViewer.java:5012)
+	at org.eclipse.jface.text.TextViewer.setRedraw(TextViewer.java:5094)
+	at org.eclipse.jface.text.TextViewer.setRedraw(TextViewer.java:5068)
+	at org.eclipse.jface.text.TextViewer$RewriteTarget.setRedraw(TextViewer.java:1017)
+	at org.eclipse.jface.text.TextViewer$DocumentRewriteSessionListener.documentRewriteSessionChanged(TextViewer.java:1423)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument$1.run(BasicStructuredDocument.java:2973)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireDocumentRewriteSessionEvent(BasicStructuredDocument.java:2971)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalStopRewriteSession(BasicStructuredDocument.java:2853)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.stopRewriteSession(JobSafeStructuredDocument.java:237)
+	at org.eclipse.jface.text.RewriteSessionEditProcessor.performEdits(RewriteSessionEditProcessor.java:101)
+	at org.eclipse.lsp4e.LSPEclipseUtils.applyEdits(LSPEclipseUtils.java:570)
+	at org.eclipse.lsp4e.VersionedEdits.apply(VersionedEdits.java:45)
+	at org.eclipse.lsp4e.operations.format.LSPFormatHandler.lambda$1(LSPFormatHandler.java:52)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.eclipse.lsp4e.operations.format.LSPFormatHandler.lambda$0(LSPFormatHandler.java:50)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4058)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:152)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.174
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=7kIWf6KnYc2thD_ey3xXDrKuAMHrrBwwnjZoxjlaWiw-1793008166.7298503-1.0.1.1-V.LQC1tVtU.AZFH8TIU.F6Ty0QfDNH05Z4NTcHmqH0cLh59.OKh1jumLA4BYVIhcUrCU3Cz1HWIWd.FRY0gcvXbu.8g.M0ENpo9LxPvETqrfNCP_NJZIC68Azb4CyPj4; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:26 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:26 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.229
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=tzAgHf78YKcZhEJH8V3Fet92AWjySn0fOkl93wmY_B4-1793008166.7918305-1.0.1.1-vhj1Y0LVE3dYuVQtR9tL5bqBYm4JYJPbD4JqfP2LtJwvTvHPNoTXEBWNy2WOe2DQQ8K6IMXGb34QvI9VwaT9y_fWy7.lk9JUNNpm9BCnHyrXSmcVeF7fpVmc88QwVKf4; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:26 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:26 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.269
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=7HT1ZquzaciIPpRsVEhNecRUZIeUvLeqsTyl3uee7gc-1793008166.8378189-1.0.1.1-ki0s90hPYGpwZFiaDAx2U1enPDsjOlPPu8MNm5lm84Fw7U9MVTMx88xZU7NerVxXIFE8IXSUMvf6sjRZpf6RyPiA8FpArxcHskj93BHI7SxIEN9BlAV4iySy4WL0D.uY; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:26 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:26 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.313
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=U45HOn9gfdysUBYV4gzX5KADPWbxzCG14Fif15d9CPU-1793008166.8814821-1.0.1.1-dKBLX2FS1oTCj3f7ip_biqNCrPzjtDiejUmM9J0qnVDw05L_XIaTMrzZR9a6_CIvsv1LywBmJceuq9sy6zbxcYRuLjECccJjQcEV04sgBcUsjg_LjhKBZeS30NKyCZSx; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:26 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:26 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.355
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=2f51B9xYhylVlcsmmJs1LwpMzI7KK_CJf1VIZiyeCQg-1793008166.9241285-1.0.1.1-B6SQKJsEO_gTmzWy5zNnntRw_miVftECBP3.diJsOKjSUzgCf9N_i9ls4.Rt1ARiZgrBKmm1DMlHsZoDeDFYuBJ7XOpvLRENKjlYAWrBXqJuteVHFBkcbdhjFeMprh_U; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:26 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:26 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.396
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=UzZYxpfU3Wt48oWSkifBT_.lsuJpAPg3LZMo65WMNvM-1793008166.962613-1.0.1.1-OKA75uU.LYY9QnTPaQF7jLZRNtKYByqbOreJncMewqpckYRMK64FLuQA8PlxHaTjf7wXJAsqdhaJ2MP.HCw1OWe8dB1LR3ZEmbvRwaP0GT_Z4u1l0fxe2q3BOA93UpoU; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:26 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:26 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.499
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=8Me7fVY4WSralUuWnYPFqlDuJNx.Qfta11b88T.VOkE-1793008167.063745-1.0.1.1-FfS4wtbndgfycFOrjg8ADzk3mIts5fB1hbAIvemjCy5LYIlL4i5t2jyDxvOUIQDwRSn799wcFSYsk5lZZjJm.cQ38z59lbYGxyV8G0avhKnYiZfND.GvnI.IfupOdOGm; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:27 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:27 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.540
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=QxwZrOm_UQVLaO_sV_yD0YhilmjPri7jOrZZnhOhrFE-1793008167.1073244-1.0.1.1-xAIeseg7m8i.fRgS2IJZqoRbcf_CxV9Mx4TMWDgMkDr7MR7yf0wLO.hGal2Of0RGN2j6F4YzhQ2ZOU2ppge4oDkw42JvCibO0UyetPD00WCnETRgCULVCCrQO5GUnM9Z; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:27 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:27 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.586
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=qi9qBwC7_sDKhqm_T54sAdKu9EUenGsv2RghkRhPunU-1793008167.1498377-1.0.1.1-VheI13y2ziGW4777PxDtfWIBWr_Ylk7UVnKB6qclhzl8BbAN.DAIBaWAObfbAVSaQ6H9Ehfw6nKUtP52.muZOfsHAIMCf9MJycD0oV30JcPSIZfZrg0tB3V3.8ufnbQz; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:27 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:27 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.625
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=EClSYgMyglG5xZdCbZW4iSotGXL2OfD.FeDqvnHRNgs-1793008167.1938396-1.0.1.1-h2gLiDeiYv1Q8POBhvN8q3Xr2ZRcB2kFh8cg2_DU_lpxPCXLnn1MxMbiWIRa8QF5B4XNR7IkcG7fo8OsoP8TAJMZGOeSFjFaI0rYob1ckZU8DP9qreuXoLYuYKGbVqbP; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:27 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:27 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.674
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=MpR27c6BadvvsAdnH2TlZ0oAGhlianM89K3pLJ_0Z.Y-1793008167.2402437-1.0.1.1-5gBvcThoHQbMjF1QTBwwaL830RM8AF9ZSaYHwX8D.WBQ7MfN0NtcV1owT5nNSme0DkZKv.EVa.nnGa7cveecMQJdtflbfdew87j7KA1TnMxYIk7Oh51Lr2z.L2a7Ar4v; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:27 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:27 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.714
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=KQ24Fr6zgpYhaRdg26UqT2Lmy7uAmPuRvH8ZXXkWp3Y-1793008167.2832644-1.0.1.1-ySZnAXEYXg4xaUjHQDZQJSdymH8iNwycXRtegRTCidPNG3gAFcuK243ziQO8o5PT0rhZPMh_9oCmPRQdYyo4IgciIdixOOWTo5kdzAfQprOgvMikbA1Ux_ZFLW7oBIKM; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:27 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:27 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.758
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=xpTE7ZW5qgnT2_r8Q_FurP1hfUwgxadSpYL.xC8zNJM-1793008167.3223612-1.0.1.1-hItc1.sKiNaN24f3K8SvrVz39gUyQCQVYEpfI3PZOBU3wEpE7BBJB6djSjaRGFJ3PfjzXNI5Ery9Om0g6_.hrQjnojmea03bk3umO_4shyi7RVnCAIXDip8R._Iow6Jh; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:27 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:27 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.827
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=qNbl4OyBZIz3ds4ic9fYbVoBsyi6QuYp3Ky7LbsilpI-1793008167.3965807-1.0.1.1-09NYIp8aJG8YQs4LPKbPcNDNcHka06u17x0ApCVa.sP73r2ZnbIcfkgs4TmtOn8SkWDAzBnDCu2DGzDUCWT6phfb6.Ojiafn_20F02fnP.V_g47kXGmLC5ZsuM9qGiec; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:27 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:27 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.868
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=jCgjYe8FlIxEH444T59g1cDaamsjB_0JIfB0zJ3iwWw-1793008167.4341004-1.0.1.1-h9d7uxkPFyj9L9iv7Hv_i8kx.x8WeQ2TQu4yU7BBvuLNLBAGBrwevQUjJ6jyMkiuOwlSAze60q9Wt40KUpnW.nIPfDcq2brqMdUQ24pXE9nD9Jz8jIwhfr0c7d0esjCm; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:27 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:27 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.907
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=7oEAxe6sX4Ckqo27ymk6nBBIHxjbbNrb.T7p5G7AfKM-1793008167.4753325-1.0.1.1-e9fealBeHTf8TjTNRbATNZ59aV0mJSpPG0BzHaHbecC2BB7H3_JwWrFBJMZnF0gKBslxUCrwKTsbuuR3RDnL4IOLhe7cDXIPX_Ua0.i4mz7Siw6LsVU7P0yM84deUSzO; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:27 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:27 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.948
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=pKUmG_moLlu5mgX9oikAUlrPo2kVedl5Ae2nk.lEan4-1793008167.514186-1.0.1.1-oop2wgnNG9AW9fH1yR_CEwNRXWAqCW9nPquas7v3glxkrScAQGdqBfhMWr.seRqovB5kVniDDGrnL_D6D0ZoDCPKf4TQrhlqIc99Ze5z_6K6IIttgWuaT8DyRWx_liJs; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:27 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:27 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:26.989
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=sKbYvqytMSxuDtk.cmhwRq8ntPHY8vvcmNtVqiCCTTQ-1793008167.5565267-1.0.1.1-8wuFtUt0yHsR1qMaJ2_x2wuRptVww5K5AA6SYJeR.M3tJnn1aEBYUkX8ZxngogJE2QEnQeA0W6vx2oAyur0nO3jo.uAbigz1F_.cO9JMWTmNIWsPqrIdI3ZNx_nJ7nzr; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:27 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:27 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.443
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=_ONJDIwOFajdXjuIZKKGLNAn9rI4zS8MiHIok21b2iM-1793008168.0082555-1.0.1.1-pu77m1Y9nlVKN3yCtKHnCVFyx13D2DpG4cYLfLynq0dILQaXFuxLdeJMC6e_oMVhIFvy_HnWn_1hVqOibs_qhdladvRbsgF.KGt7PdttYUCb0DW2SUGGpDRU3ixaQuY_; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.482
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=0brVTm931D7CIDPHuxNODlqlWThhml4ti64Ud3whpZM-1793008168.0482414-1.0.1.1-J_5X5fTo4HZ_vZcVCuKoBJ6JuQfYuk_SDctx4dcg1l_qlITSOgJ3B0ugvAHnLammKgTOIA.JTvv1Swt952gikz1lrVikjHRRBdxzJAZtXrlZLxBEwNs0L5rUiOxriLBj; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.539
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=8WKkQYu49DE78W9vTYkoCb6kydhfUq6ncmT5iV52YoM-1793008168.0876172-1.0.1.1-Stxt3.Ce7fg5j9.VJa4eT_mwtIep.sEa1d8IxrrbGOpjgPSnkYJGvo33otAXo1.hjrHb7B7Dlxk1ssswbXZXhLHHKOWmszqX9CZGgOh0oHbwwL9HkjoSqNdSElJJtfbv; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.558
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=83rLRni0IrhFoMNVx7jT2I2K8hVoQfXdRkQs2fZc4oQ-1793008168.1147068-1.0.1.1-qN9jD6c4TRGn9sz236p2DXmEyY0BsIzGtAQR6.9IZLL7e.LujHF6Wp9ijK0H3_602YSc15D9.l.7.xbGhmZwlU9cj80ZNgM1bB8FHZyGniGUXVPHmnk_5BGKINCrcQzl; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.572
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=fEEFKAfoRkCyL_ahsioD_2ocDpgiLegml9QyNAV_ngU-1793008168.1415224-1.0.1.1-CnbOwPhoIrv.d8wZ0WOmdyVYYNW3QTBqljvz7g3TDaFTqwg_u5JGIsKCVGHhXfcKtVl2.yvYpOP3xUQa6na.2iv8c3uuOphMXsmBKBzDpUdDFr0g0ul2a5NliYPA5Ys7; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.581
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=9dSbA4gyk1YeuGfVMmC1wE1bwJVhb7WtbVPSUqjztyk-1793008168.1343207-1.0.1.1-4ZV7C.q_ZwHSEebw8unAQFst6l98ZB_.A.3kvO25cW253hF5b4Qyak8aaZv3_K9gQbDszVYSkBSLg.ClsBt5rULp44xUyhNkswr3LjVBU0KiMOztYq7_voipALOApuE1; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.584
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=8mIDCR5NfkpPluBSGp2w5TpYMiPHcjcabDKZMzIESpo-1793008168.1369607-1.0.1.1-P5G0riz6h4bQzk5_RF5wo_P0vB87hCo5B3M4lWg4Vr5_bUGum8okhqzdFSg6L5JvS3A4ohPnIcKJ3cmRXLjofIzFP6POrl0D1VllQInXmm.rIr8K4Ssh.ngxe_cZgtBa; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.590
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=h4B0QUcI1Bh89AcWsXFbZRCDtPGZ5WephC7p3mOdmLA-1793008168.1411383-1.0.1.1-jPn7H6Q_6sC08_Vk4wgdeQGqMKZhpczSfUhm53FswwNWwPbaDLWM3DaAb0RaRE_X5cdZVrxLGbX0dm72qoahhVkiu4PbidWmblYZpvAKzVXWR2WasfCc3fSeGWfIWesT; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.619
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=.Up7XIsB2Vg4N05EdEu7KNWJ04kLxsGRCZCP7vU0dD4-1793008168.1874256-1.0.1.1-1VD9auUWr1MZ7HvUed1vo46Isgj7NLxglw71tvx7.YW3vvwYn08x.uFFAgREOZxRc5EoZ5m8Y5auvRi4L3Xd2c5Xgb07XMG2aAGcIP5Q3B0hobKqcJqlolhuZ_g_px57; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.620
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=rJCWqe9G3hfqg62__b3oggt6orUMqO821WArpKP_5T0-1793008168.1708984-1.0.1.1-JVQSC_tjgg0WiHa.LYKNCdyuhEeZM1_Qibul1oTkPgJJXIYeZ4VWoLvFflsUQkwPTeTcCLjRljbXSF0Ru2Q2vBY4vipw7G_Rey25LXHjjwu28oHPpBTq2.IncNjp7je_; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.638
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=rlTZXS5Gvx3UzCfSAv3WzIsfuaGPCR4V9_jMAk_H1a8-1793008168.1918635-1.0.1.1-tvi8auEhLca9T__8x8SkKoj5dQKOvokEuCdKVOl52fBwGnXFJD_.bJAhhxkLa2j1WIdbYIAyJbbCQCKeiKTAC8g9Xxem8eqPzNt6pfSK7qu6dqLgerTol1H.qNzI45TL; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.642
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=ORdT_CV4cGPvN6co2PN6ZU3cjC7Z73n3xLhGNPtwMM0-1793008168.200286-1.0.1.1-3iDCLqs4RFE1Is3SiVzLU8mCV459ywJYhnyj.FxV88TJRu7E1H8YsFLuVZvcdLsot3i1MykKfgK4d730DBi.WuFABW.4WLXxEEzLR7I.6.MH0p0eU8NDokPRe2q9E2pS; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.644
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=8JyBOGlwxi0Q52wLC41T7Nxv152BW72zY8pzsYLJXBU-1793008168.1971798-1.0.1.1-cSObTTrPStGuP6BHYFWcj6jMRSDlWT6VsPKfj3qC9A8793Un3XFrt_FYVziiwtIINSpfqc_S_Vu35m9ECxYbdPB8cScUfAQPWkzVShOFLuT7Se1xRyoBsduq1lfSD4dy; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.673
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=FuBTYXlAgzzNQX9wNGoJHJI4_idK8MByuP4x2zQUhKY-1793008168.2428725-1.0.1.1-sLqtl1ZubwzJ7DpQCqykURJS618h3.W7FAtlfJcJhK539InVAse6umPWYRwXyVSTN1C8TdAv7s1iY435mcnAR2TknKNd2iKbZ5vXaEU8IGF7ziHMmv_yhrbEOUCAakIo; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.683
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=89qv90djHcFTXouUotJoTvHDY4ROjLspjG7vJL5Yh50-1793008168.2452245-1.0.1.1-oZGSJbVa.fDiicwPxy7D1aA1js0JA_v6MjDZdVox6X8CTvlXlnW6fKH90Eao_NTmBdDOfR2Yal5FY_WsKYltcp_wNy8cUl5t7ofODAnkJIM8ogcKNUF_H7RtpxW2sTaC; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:27.695
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=.6pkamlB.7q38tNNW2hGuqP7ulhr5ZBJg3h8A4DX2to-1793008168.2518103-1.0.1.1-14YY5SkRa7Qi5zBqbDAbwfQMcRjKIUrQIEuS18dZzTGItdYK0MEgTJjayjh20svjcCzXSnPxsgD8Nv_hRZ2G9.7qHnL5DOk49o0l3sBCUgPlzSIivbvRLNYx0HfNUsAI; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:28 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:28 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:29.572
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=Oos7dXkxNRWRvHd3Egorf9XdE1Bn.B9Dew4mISReBp4-1793008170.1342254-1.0.1.1-AI2eWLB2RWpKM6ZIuXBJnusarPPLHip6MJrQnn1kInlCkuovp4vNiMJikh6UprbMNWc_GVL.zueTs2kvooeRFF5M62gEPzRq.v2DX6tOPYiw65DEmjN.PA6_7ZCHyyMC; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:30 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:30 GMT
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 15:19:29.788
+!MESSAGE Classpath changed for project: company
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:29.955
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=RQx2ZuYVt5FWvhXk1R0IyI7Bcm4ISxRyJn3z08pbKUk-1793008170.516997-1.0.1.1-PFepqoMBHJzm7FZDjDkhHZOT26Gt_FodCKNyFkNVLlvB_l5DQPKIs3YbnejUOQaSxF_D_lHDMQ8xIsLfcgsHkZoJ7KiPvwe.s6YY83OkSgG7uIfs.w8gDaq8zcO8GM0e; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:30 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:30 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:30.040
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=IbcvFHIdckJ.7tm0L.mrCTkwFVjffvvuu4NhWzaEFiE-1793008170.6044927-1.0.1.1-KbMr6d3wUvGYhnDEcWAJv5OqfWeK0NZuSWUJ0eeLaUSWvRfhdQgK0MfCLVHsvnuzT1XUq0gwA9pas4IMgl7pNEV.YLmPe.JCScEpcRo6RLXe72Xpqfyhm7eY6_gAagOm; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:30 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:30 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:30.131
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=8xX2E4aO.liwM6NMBrCZOBZf6.zYUKmX4cFsUGvL3RA-1793008170.697092-1.0.1.1-pyMHULs2BOMEJHEsXcyCdXPmJ.C43VAskl4UyDkV9MNgqJ3zWW4a8tuXQkX.Z35CLCp_gxfC8yS5A5f8no8onZ7FLcda7TAi13CNFd4b5A6KMnL9LONzwHDoAOn8aboW; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:30 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:30 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:30.217
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=uUyQ5800OzoBieGpCdepUJXqp88l4tgWFmdzS.XlG_A-1793008170.7858138-1.0.1.1-e.kTBIB2C4GHFUSBrCi34uDm5Cpt025aONzJfmpGApyzsnVmM.EWZmRgtK.SEFHZz79KpQ94_2HaZ7WxrcDtdkRPFWLp7dROfd6DIsGAclRt3z3vZUs__l2qu8RZi9Pr; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:30 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:30 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:30.305
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=gqZUICLUJYv._7RljRqKqMyOCcpAyGpcVCdec2wh9cw-1793008170.860344-1.0.1.1-1NHE.6tWMLbOjQwXQs2QtxKqixIO_hGkgOJ6Hw2UuXjSSC0nh6cRoI.8hokGp3jwYJL49HVoB92BVizXSv_extDE50LlOlB.Td4YlZ7IYlylC45H7xvlOVIIppy9Sl_6; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:30 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:30 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:30.434
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=Xscmok5aQKD9FgaRw61Nobwj9wsbO_eruM0zEWO0v.E-1793008170.969278-1.0.1.1-MOVaHvRNY_wCTuNMHarTF4lk9d7XX1Ei_A5tgXCJXJfvNAB4C513Qi2_XPh8RfLyQQY9N5WsABf3AER44K2pU5C5fciHac0R4VRzplNRo1qbesO6R1O0ZA5A9gLA62Uk; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:31 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:31 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:30.514
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=bHkpQq9faEiv4XTvjfPX2M6W8OWpJlhIyOE.ZHy5DUY-1793008171.081185-1.0.1.1-4VTRTG991UBP0ckCCHGIgS7kjva8gx4GLQqZ_lRYh51TSDVqHeRb3pZrM1P8tBwJHVI3v9NO1p.3Ctf84wQGXAlalPG2zcBIexxxJ5A_QrdiO00ZH9Hq6MfV4RPslA.B; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:31 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:31 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:30.593
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=zREPBlU4.Fbcef4O9sCtIq8pswnV4TB.kj8LMNzsX7M-1793008171.160569-1.0.1.1-Shixq5uNVZ1iwLSYvWO.ppL05oRPAl0.cUOZJlnsjEYCZY9pCrMkCdVMi5wlZqMYPoG9CZZG8A9qVZ_fSxZYFscyrmzioLuC561Thbls6qXqiGl0LRP4rBiiFNTtU338; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:31 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:31 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:30.676
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=uFhvXD4bXJ6P2UZv93FeO4VUhsRWl_x3VYZSjszN0Sw-1793008171.2403588-1.0.1.1-NhbxHdIWwo7ZpMP93371oWB0gnC.yfuo8FPQLAk.T5Alvfkc8V_xvspdcKMZD2wh7ciDpxg25i.qWf8VKGO8tEK7HEZIFBdkyYeMt8gkYnhhM7lJ2fh1P0DFIU.jZ36X; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:31 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:31 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:30.767
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=VaSTGLnc38WEYjw0eQ4_.Qv5602YEXOWOmrQ87EENGU-1793008171.3218338-1.0.1.1-iZJSHgM0B6FaGDjM1he92ejmYX_ptJemdLMY1cDAeWfquXc.TBW_2GeCVjwgNXpzUDEqueE4HX9PBHit5eAM8obsUKJDBoY77YNFWmIpCeLkTqoaqZ7rcd5QTDP1fCQ2; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:31 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:31 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:31.027
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=uitE493KWBenq1cQ9aZHuNxc5oKAaea.coD4EWTpptQ-1793008171.5780883-1.0.1.1-xNQ4g7N6DU_ZObv2HyTTRHq65WIT2R0hGdnspZH_ponM2fF0OwSPP.YWv0sMj524CCwKc15hzt49vv4EdRxG2nWtgmNNYSCE6.N.KF6mMErLFZ0LsnmS.l_YE9H2HMAy; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:31 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:31 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:31.112
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=HHDkP2ehjAOQm2Me3a34PUg93WKET_SdwAVRVz17sQg-1793008171.6696236-1.0.1.1-DFk9TkxTBJmXRG0kBXh_q3BjsW0KlNckdiHaJE2i1.0VvMBuEoNTCKdlbH8E8GXZINFn923_9yFSpDg0RUEnZSE2gmu9L8D1dKWtAyHMbkISINhy4QmI2KMT433DBQ8c; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:31 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:31 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:31.194
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=b9oQVF9EiF8UmxHMJaBZ1I3vEcmpUE6vuNqr6KAXfyQ-1793008171.7632236-1.0.1.1-X03U8jCvYTYKBVABGf96.yGRsM0oblH6KqfbZwsAtWPS5KSpi.Xh6IM97xTycge0BBCIS6.uAvquJw.wD0hwBO3SklUYfAdOH2vCP1TxLzsl274rghrNQ9nrCQZv5Kkj; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:31 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:31 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:31.356
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=cXpq79WH0bQRegv8gF1oaXDOqZ7MqAUUOeu.Mk74K1M-1793008171.9138305-1.0.1.1-nlfMa8XCEP18EWiEoJzoU2Rjkqk0QWYpuggNihChGe.8tfXIXHpw86K_4TbUuArWAnC3A7qb.5bOrqiZwy_.SAS2O8sew56KH5xIlIz1.qPwvXIkiqTWeHgqfOgvB6XO; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:31 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:31 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:19:31.483
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=uzcVUvOXH1yH5SsdUyHugMd6pLKbmGCz42EspTPLpLI-1793008172.0374353-1.0.1.1-fxFiiQyktEwQW8tNz6EDuf_riC41ubEIInM5A_iAF1k__xDkQv5FxXE5PpMTK796c17G2ZpKmpgmXhqsb8KFgHe5RPJqIeZZ016Ro2tLM8j6WoqA6F_r70X_hGBfkPQ1; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:19:32 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:19:32 GMT
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 15:19:32.787
+!MESSAGE Classpath changed for project: company
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 15:19:41.916
+!MESSAGE Classpath changed for project: department
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 15:20:04.703
+!MESSAGE Classpath changed for project: designation
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 15:20:22.485
+!MESSAGE Classpath changed for project: frequency
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 15:20:35.762
+!MESSAGE Classpath changed for project: committee
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:31:34.995
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:31:34.996
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:31:34.997
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:31:34.997
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:31:35.004
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:31:35.008
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:31:44.048
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=QZS3NXFajMG5RkwIF7qHqxE5vnnwrUeRlaksJDJQxa4-1793008904.6080892-1.0.1.1-iNoYlbEW4tQX45ma6TmLyiigs6FSUTQ46hAtRrS1tXLK3dIETAfx_cUdZRggo2EZTg4VRPNIO5CM7VdXUOOaFbQ9AkhA8OlGMFYfqd2WIeVpQlIXvsKH9S3iPr3S1vVz; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:31:44 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:31:44 GMT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:31:44.597
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=d6sz2dDFhQOAj7h4r.UJlzEDahp7doYear7_kHVocko-1793008905.1708724-1.0.1.1-LpRqJRBGxaOckGpNL0D7hccHRm0goafy5nNCv1qsRxeBFuZ2C6_1hqk5jeDAJqTvZKxbbZec7OxKQV3M.qyyy4gqt7pHygJbVA72gfge.HdkVrwu_Yzc6YHh.4OOlI1s; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:31:45 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:31:45 GMT
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 15:31:45.420
+!MESSAGE Classpath changed for project: committee
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 15:31:45.499
+!MESSAGE Classpath changed for project: committee
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-10-26 15:31:46.043
+!MESSAGE Invalid cookie header: "set-cookie: __cf_bm=3QLarSKkM5UIJUV3JxQb0LDMsU18Z9mTs5fXL0JsMkY-1793008906.59894-1.0.1.1-n0svD16q3AeDTDhe4sTSiL52UCaNdjz4Wy4TQASThfy2O9yVCe5sZs1hgkZ5yov_TgCooC_qqmeFYenQUd2GnPmN4NV9LszNbzkjuAAS2MNzJ2MR94VYLa0ZY7aqT6Yk; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Mon, 26 Oct 2026 10:31:46 GMT". Invalid 'expires' attribute: Mon, 26 Oct 2026 10:31:46 GMT
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 15:31:50.007
+!MESSAGE Classpath changed for project: committee
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 15:32:04.013
+!MESSAGE Classpath changed for project: company
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:32:13.284
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:32:13.284
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:32:13.285
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:32:13.285
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:32:13.292
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:32:13.296
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 15:32:24.475
+!MESSAGE Classpath changed for project: department
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:32:31.031
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:32:31.032
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:32:31.032
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:32:31.033
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:32:31.039
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:32:31.041
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 15:32:42.626
+!MESSAGE Classpath changed for project: designation
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-10-26 15:32:55.258
+!MESSAGE Classpath changed for project: frequency
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:36:13.132
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:36:13.133
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:36:13.133
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:36:13.134
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:36:13.140
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 15:36:13.142
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 16:27:03.048
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 16:27:03.048
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 16:27:03.049
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 16:27:03.057
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 16:27:03.063
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 16:27:03.066
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 16:35:48.329
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 16:35:48.330
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 16:35:48.330
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 16:35:48.331
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 16:35:48.337
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2026-10-26 16:35:48.340
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
