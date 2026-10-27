@@ -49,7 +49,12 @@ public class GatewayserverApplication {
 				.route(p -> p.path("/trainingtracker/committee/**")
 						.filters(f -> f.rewritePath("/trainingtracker/committee/(?<segment>.*)", "/${segment}")
 								.addResponseHeader("X-Response-Time", LocalDateTime.now().toString())
-						).uri("lb://COMMITTEE")).build();
+						).uri("lb://COMMITTEE"))
+				.route(p -> p.path("/trainingtracker/training/**")
+						.filters(f -> f.rewritePath("/trainingtracker/training/(?<segment>.*)", "/${segment}")
+								.addResponseHeader("X-Response-Time", LocalDateTime.now().toString())
+						).uri("lb://TRAINING"))
+				.build();
 	}
 
 }

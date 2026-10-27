@@ -60,7 +60,7 @@ public class CompanyController {
 	@GetMapping("/name/{name}")
 	public ResponseEntity<CompanyDto> getCompanyByName(
 			@RequestHeader("trainingtracker-correlation-id") String correlationId, @PathVariable String name) {
-		logger.debug("inside getDepartmentById() in department service correlationId {}", correlationId);	
+		logger.debug("inside getDepartmentById() in department service correlationId {}", correlationId);
 		CompanyDto company = compserv.getCompanyByName(correlationId, name);
 		return ResponseEntity.status(HttpStatus.OK).body(company);
 	}
