@@ -19,7 +19,7 @@ services:
       - "15672:15672"
     healthcheck:
       test: rabbitmq-diagnostics check_port_connectivity
-      retries: 20
+      retries: 25
       timeout: 10s
       interval: 10s
     extends:
@@ -38,7 +38,7 @@ services:
       test: "curl --fail --silent localhost:8071/actuator/health/readiness | grep UP || exit 1"
       interval: 10s
       timeout: 5s
-      retries: 15
+      retries: 20
       start_period: 10s
     extends:
       file: common-config.yml

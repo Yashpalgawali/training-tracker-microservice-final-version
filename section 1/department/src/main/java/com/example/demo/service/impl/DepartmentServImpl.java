@@ -59,16 +59,25 @@ public class DepartmentServImpl implements IDepartmentService {
 		}
 		return list.stream().map(dept -> {
 
-			ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(correlationId,dept.getCompanyId());
-
-			@Nullable
-			CompanyDto body = companyById.getBody();
-			dept.setCompanyId(body.getCompanyId());
-
 			DepartmentDto mappedDto =  DepartmentMapper.mapToDepartmentDto(dept, new DepartmentDto());
-			mappedDto.setCompanyName(body.getCompanyName());
-
-			return mappedDto;
+			ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(correlationId,dept.getCompanyId());
+			
+			if(companyById!=null) {
+			
+				@Nullable
+				CompanyDto body = companyById.getBody();
+				mappedDto.setCompanyId(body.getCompanyId());
+				
+				mappedDto.setCompanyName(body.getCompanyName());
+			
+				return mappedDto;
+			}
+			else {
+				mappedDto.setCompanyId(dept.getCompanyId());				
+				mappedDto.setCompanyName("");
+				
+				return mappedDto;
+			}
 
 		}).collect(Collectors.toList());
 	}
@@ -77,16 +86,22 @@ public class DepartmentServImpl implements IDepartmentService {
 	public DepartmentDto getDepartmentbyId(String correlationId, Long deptId) {
 		logger.info("CorrelationID in department service {} ", correlationId);
 		Department found = deptrepo.findById(deptId).orElseThrow(() -> new ResourceNotFoundException("Department", "ID", String.valueOf(deptId)));
+		DepartmentDto mappedDto =  DepartmentMapper.mapToDepartmentDto(found, new DepartmentDto());
 		
 		ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(correlationId,found.getCompanyId());
-
-		@Nullable
-		CompanyDto body = companyById.getBody();
-		DepartmentDto mappedDto =  DepartmentMapper.mapToDepartmentDto(found, new DepartmentDto());
-		mappedDto.setCompanyId(body.getCompanyId());
-		mappedDto.setCompanyName(body.getCompanyName());
 		
-		return mappedDto;
+		if(companyById!=null) {			
+			@Nullable
+			CompanyDto body = companyById.getBody();
+			mappedDto.setCompanyId(body.getCompanyId());			
+			mappedDto.setCompanyName(body.getCompanyName());		
+			return mappedDto;
+		}
+		else {
+			mappedDto.setCompanyId(found.getCompanyId());			
+			mappedDto.setCompanyName("");			
+			return mappedDto;
+		}
 	}
 
 	@Override
@@ -101,16 +116,23 @@ public class DepartmentServImpl implements IDepartmentService {
 		
 		return deptList.stream().map(dept-> {
 			ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(correlationId,dept.getCompanyId());
-
-			@Nullable
-			CompanyDto body = companyById.getBody();
-			System.err.println("the company result is "+body.toString());
-			dept.setCompanyId(body.getCompanyId());
-
 			DepartmentDto mappedDto =  DepartmentMapper.mapToDepartmentDto(dept, new DepartmentDto());
-			mappedDto.setCompanyName(body.getCompanyName());
-
-			return mappedDto;
+			
+			if(companyById!=null) {
+				
+				@Nullable
+				CompanyDto body = companyById.getBody();
+				mappedDto.setCompanyId(body.getCompanyId());				
+				mappedDto.setCompanyName(body.getCompanyName());
+			
+				return mappedDto;
+			}
+			else {
+				mappedDto.setCompanyId(dept.getCompanyId());				
+				mappedDto.setCompanyName("");
+				
+				return mappedDto;
+			}
 		}).collect(Collectors.toList());
 	}
 
