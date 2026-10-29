@@ -76,9 +76,9 @@ services:
         condition: service_healthy
     healthcheck:
       test: "curl --silent --fail http://localhost:7170/actuator/health | grep UP || exit 1"
-      timeout: 5s
+      timeout: 10s
       interval: 5s
-      retries: 15
+      retries: 30
       start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: "company"
@@ -100,9 +100,9 @@ services:
         condition: service_healthy
     healthcheck:
       test: "curl --silent --fail http://localhost:7270/actuator/health | grep UP || exit 1"
-      timeout: 5s
+      timeout: 10s
       interval: 5s
-      retries: 15
+      retries: 30
       start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: department      
@@ -124,9 +124,9 @@ services:
         condition: service_healthy
     healthcheck:
       test: "curl --silent --fail http://localhost:7370/actuator/health | grep UP || exit 1"
-      timeout: 5s
+      timeout: 10s
       interval: 5s
-      retries: 15
+      retries: 30
       start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: designation
@@ -148,9 +148,9 @@ services:
         condition: service_healthy
     healthcheck:
       test: "curl --silent --fail http://localhost:7470/actuator/health | grep UP || exit 1"
-      timeout: 5s
+      timeout: 10s
       interval: 5s
-      retries: 15
+      retries: 30
       start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: "committee"
@@ -172,9 +172,9 @@ services:
         condition: service_healthy
     healthcheck:
       test: "curl --silent --fail http://localhost:7570/actuator/health | grep UP || exit 1"
-      timeout: 5s
+      timeout: 10s
       interval: 5s
-      retries: 15
+      retries: 30
       start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: "frequency"
@@ -196,9 +196,9 @@ services:
         condition: service_healthy
     healthcheck:
       test: "curl --silent --fail http://localhost:7670/actuator/health | grep UP || exit 1"
-      timeout: 5s
+      timeout: 10s
       interval: 5s
-      retries: 15
+      retries: 30
       start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: "training"
@@ -223,12 +223,12 @@ services:
         condition: service_healthy
       designation:
         condition: service_healthy
-      frequency:
-        condition: service_healthy
-      committee:
-        condition: service_healthy
-      training:
-        condition: service_healthy
+#      frequency:
+#        condition: service_healthy
+#      committee:
+#        condition: service_healthy
+#      training:
+#        condition: service_healthy
 
     environment:
       SPRING_APPLICATION_NAME: "gatewayserver"

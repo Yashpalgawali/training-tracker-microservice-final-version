@@ -18,5 +18,5 @@ public class CompanyFallback {
 		
 		return null;
 	}
-	
+
 }

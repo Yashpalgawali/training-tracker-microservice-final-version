@@ -58,14 +58,15 @@ public class TrainingServImpl implements ITrainingService {
 		TrainingDto mapped = TrainingMapper.mapToTrainingDto(found, new TrainingDto());
 		
 		ResponseEntity<Frequency> frequencyById = frequencyClient.getFrequencyById(found.getFrequencyId());
-		Frequency freq = frequencyById.getBody();
-		if(freq!=null) {
+		
+		if(frequencyById != null) {
+			Frequency freq = frequencyById.getBody();
 			mapped.setFrequency(freq.getFrequency());
 			mapped.setFrequencyId(freq.getFrequencyId());
 		}
 		else {
 			mapped.setFrequency("");
-			mapped.setFrequencyId(freq.getFrequencyId());
+			mapped.setFrequencyId(found.getFrequencyId());
 		}
 		return mapped;
 	}

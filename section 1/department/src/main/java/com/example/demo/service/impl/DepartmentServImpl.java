@@ -62,20 +62,16 @@ public class DepartmentServImpl implements IDepartmentService {
 			DepartmentDto mappedDto =  DepartmentMapper.mapToDepartmentDto(dept, new DepartmentDto());
 			ResponseEntity<CompanyDto> companyById = companyClient.getCompanyById(correlationId,dept.getCompanyId());
 			
-			if(companyById!=null) {
-			
+			if(companyById!=null) {			
 				@Nullable
 				CompanyDto body = companyById.getBody();
-				mappedDto.setCompanyId(body.getCompanyId());
-				
-				mappedDto.setCompanyName(body.getCompanyName());
-			
+				mappedDto.setCompanyId(body.getCompanyId());			
+				mappedDto.setCompanyName(body.getCompanyName());		
 				return mappedDto;
 			}
 			else {
-				mappedDto.setCompanyId(dept.getCompanyId());				
-				mappedDto.setCompanyName("");
-				
+				mappedDto.setCompanyId(dept.getCompanyId());			
+				mappedDto.setCompanyName("");			
 				return mappedDto;
 			}
 
