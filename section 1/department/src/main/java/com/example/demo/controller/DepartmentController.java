@@ -21,6 +21,7 @@ import com.example.demo.dto.DepartmentDto;
 import com.example.demo.dto.ResponseDto;
 import com.example.demo.service.IDepartmentService;
 
+import io.github.resilience4j.retry.annotation.Retry;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
@@ -47,21 +48,21 @@ public class DepartmentController {
 	@GetMapping("/{id}")
 	public ResponseEntity<DepartmentDto> getDepartmentById(@RequestHeader("trainingtracker-correlation-id")  String correlationId,@PathVariable Long id) {
 		
-		logger.debug("inside getDepartmentById() in department service correlationId {}",correlationId);
+		logger.info("inside getDepartmentById() in department service correlationId {}",correlationId);
 		var dept = deptserv.getDepartmentbyId(correlationId,id);
 		return ResponseEntity.status(HttpStatus.OK).body(dept);
 	}
 	
 	@GetMapping("/")
 	public ResponseEntity<List<DepartmentDto>> getAllDepartments(@RequestHeader("trainingtracker-correlation-id")  String correlationId) {
-		logger.debug("inside getDepartmentById() in department service correlationId {}",correlationId);
+		logger.info("inside getAllDepartments() in department service correlationId {}",correlationId);
 		var deptList = deptserv.getAllDepartments(correlationId);
 		return ResponseEntity.status(HttpStatus.OK).body(deptList);
 	}
 	
 	@GetMapping("/company/{companyid}")
 	public ResponseEntity<List<DepartmentDto>> getDepartmentByCompanyId(@RequestHeader("trainingtracker-correlation-id")  String correlationId,@PathVariable Long companyid) {
-		logger.debug("inside getDepartmentById() in department service correlationId {}",correlationId);
+		logger.info("inside getDepartmentById() in department service correlationId {}",correlationId);
 		var dept = deptserv.getDepartmentbyCompanyId(correlationId,companyid);
 		return ResponseEntity.status(HttpStatus.OK).body(dept);
 	}
@@ -74,13 +75,21 @@ public class DepartmentController {
 
 	@GetMapping("/contact-info")
 	public ResponseEntity<DepartmentContactInfo> getDepartmentByContactinfo() {
-		
+		logger.info("Invoked getDepartmentByContactinfo() in departmentcontroller ");
 		return ResponseEntity.status(HttpStatus.OK).body(departmentContactInfo);
 	}
 	
+	@Retry(name = "getBuildinfo", fallbackMethod = "getBuildInfoFallback")
 	@GetMapping("/build-info")
-	public ResponseEntity<String> getBuildInfo() {		
-		return ResponseEntity.status(HttpStatus.OK).body(buildVersion);
+	public ResponseEntity<String> getBuildInfo() {
+		logger.info("Invoked getBuildInfo() in departmentcontroller ");
+		throw new NullPointerException("build info is not available");
+//		return ResponseEntity.status(HttpStatus.OK).body(buildVersion);
 	}
-
+	
+	public ResponseEntity<String> getBuildInfoFallback(Throwable throwable) {
+		logger.info("Invoked getDepartmentByContactinfo() in departmentcontroller ");
+		return ResponseEntity.status(HttpStatus.OK).body("0.9");
+	}
+	
 }

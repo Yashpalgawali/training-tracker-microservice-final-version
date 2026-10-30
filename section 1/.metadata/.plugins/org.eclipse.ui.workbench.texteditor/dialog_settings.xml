@@ -5,13 +5,15 @@
 		<item key="DIALOG_Y_ORIGIN" value="306"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="trainingtracker"/>
+		<item key="selection" value="info"/>
 		<item key="wrap" value="true"/>
-		<item key="casesensitive" value="false"/>
-		<item key="wholeword" value="false"/>
+		<item key="casesensitive" value="true"/>
+		<item key="wholeword" value="true"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="debug"/>
+			<item value="redis"/>
 			<item value="eazybank"/>
 			<item value="f05d3684-099c-4712-8e94-bd8446d02ad4"/>
 			<item value="service"/>
@@ -23,6 +25,7 @@
 			<item value="trainingtrackerdb&apos;"/>
 		</list>
 		<list key="replacehistory">
+			<item value="info"/>
 			<item value="trainingtracker"/>
 		</list>
 	</section>

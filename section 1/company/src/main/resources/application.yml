@@ -57,7 +57,7 @@ logging:
     com:
       example:
         demo:
-          company: DEBUG
+          company: debug
 
 resilience4j.circuitbreaker:
   configs:

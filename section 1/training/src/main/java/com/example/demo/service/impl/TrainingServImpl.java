@@ -88,12 +88,13 @@ public class TrainingServImpl implements ITrainingService {
 			return list.stream().map(training-> {
 				TrainingDto mapped = TrainingMapper.mapToTrainingDto(training, new TrainingDto());
 				ResponseEntity<Frequency> frequencyById = frequencyClient.getFrequencyById(training.getFrequencyId());
-				Frequency  freq =  frequencyById.getBody();
-				if(freq.getFrequency()==null ) {
+				if(frequencyById==null ) {
 					mapped.setFrequency("");
-					mapped.setFrequencyId(freq.getFrequencyId());
+					mapped.setFrequencyId(training.getFrequencyId());
 				}
 				else {
+					Frequency  freq =  frequencyById.getBody();
+					
 					mapped.setFrequency(freq.getFrequency());
 					mapped.setFrequencyId(freq.getFrequencyId());
 				}
