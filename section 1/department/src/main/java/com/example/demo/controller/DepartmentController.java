@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import java.util.List;
+import java.util.concurrent.TimeoutException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -81,9 +82,10 @@ public class DepartmentController {
 	
 	@Retry(name = "getBuildinfo", fallbackMethod = "getBuildInfoFallback")
 	@GetMapping("/build-info")
-	public ResponseEntity<String> getBuildInfo() {
+	public ResponseEntity<String> getBuildInfo() throws TimeoutException{
 		logger.info("Invoked getBuildInfo() in departmentcontroller ");
-		throw new NullPointerException("build info is not available");
+		throw new TimeoutException("build info is not available");
+//		throw new NullPointerException("build info is not available");
 //		return ResponseEntity.status(HttpStatus.OK).body(buildVersion);
 	}
 	
