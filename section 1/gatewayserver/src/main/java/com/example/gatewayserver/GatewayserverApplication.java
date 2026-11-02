@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.circuitbreaker.resilience4j.ReactiveResilience4JCircuitBreakerFactory;
 import org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JConfigBuilder;
 import org.springframework.cloud.client.circuitbreaker.Customizer;
+import org.springframework.cloud.gateway.filter.ratelimit.KeyResolver;
+import org.springframework.cloud.gateway.filter.ratelimit.RedisRateLimiter;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +17,7 @@ import org.springframework.http.HttpMethod;
 
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
 import io.github.resilience4j.timelimiter.TimeLimiterConfig;
+import reactor.core.publisher.Mono;
 
 @SpringBootApplication
 public class GatewayserverApplication {
@@ -46,6 +49,7 @@ public class GatewayserverApplication {
 				.route(p -> p.path("/trainingtracker/designation/**")
 						.filters(f -> f.rewritePath("/trainingtracker/designation/(?<segment>.*)", "/${segment}")
 								.addResponseHeader("X-Response-Time", LocalDateTime.now().toString())
+								.requestRateLimiter(config -> config.setRateLimiter(redisRateLimiter()))
 						).uri("lb://DESIGNATION")
 				)
 				.route(p -> p.path("/trainingtracker/frequency/**")
@@ -70,6 +74,16 @@ public class GatewayserverApplication {
 				.circuitBreakerConfig(CircuitBreakerConfig.ofDefaults())
 				.timeLimiterConfig(TimeLimiterConfig.custom().timeoutDuration(Duration.ofSeconds(10))
 						.build()).build());
+	}
+	
+	@Bean
+	RedisRateLimiter redisRateLimiter() {
+	    return new RedisRateLimiter(1, 1, 1);
+	}
+	
+	@Bean
+	KeyResolver userKeyResolver() {
+	    return exchange -> Mono.just(exchange.getRequest().getQueryParams().getFirst("user")).defaultIfEmpty("anonymous");	
 	}
 
 }
