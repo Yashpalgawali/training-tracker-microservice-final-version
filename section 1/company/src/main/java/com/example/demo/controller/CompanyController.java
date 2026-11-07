@@ -23,6 +23,7 @@ import com.example.demo.dto.CompanyDto;
 import com.example.demo.dto.ResponseDto;
 import com.example.demo.service.ICompanyService;
 
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
@@ -85,10 +86,16 @@ public class CompanyController {
 
 		return ResponseEntity.ok(companyContact);
 	}
-
+	
+	@RateLimiter(name = "getBuildVersion", fallbackMethod = "getBuildVersionFallback")
 	@GetMapping("/build-info")
 	public ResponseEntity<String> getBuildVersion() {
 
 		return ResponseEntity.ok(buildVersion);
+	}
+	
+	public ResponseEntity<String> getBuildVersionFallback(Throwable throwable) {
+ 
+		return ResponseEntity.status(HttpStatus.OK).body("0.1");
 	}
 }

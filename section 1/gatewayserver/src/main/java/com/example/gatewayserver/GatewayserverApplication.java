@@ -78,7 +78,7 @@ public class GatewayserverApplication {
 	
 	@Bean
 	RedisRateLimiter redisRateLimiter() {
-	    return new RedisRateLimiter(1, 1, 1);
+	    return new RedisRateLimiter(2, 2, 2);
 	}
 	
 	@Bean

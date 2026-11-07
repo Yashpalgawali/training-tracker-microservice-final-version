@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import java.util.List;
+import java.util.concurrent.TimeoutException;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -19,21 +20,22 @@ import com.example.demo.dto.DesignationDto;
 import com.example.demo.dto.ResponseDto;
 import com.example.demo.service.IDesignationService;
 
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping(value = "api", produces = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(value = "api", produces = { MediaType.APPLICATION_JSON_VALUE })
 @RequiredArgsConstructor
 public class DesignationController {
 
 	private final IDesignationService desigserv;
-	
+
 	private final DesignationContactInfoDto designationContactInfo;
-	
+
 	@Value(value = "${build.version}")
 	private String buildVersion;
-	
+
 	@PostMapping("/")
 	public ResponseEntity<ResponseDto> createDesignation(@Valid @RequestBody DesignationDto designationDto) {
 		desigserv.createDesignation(designationDto);
@@ -47,7 +49,7 @@ public class DesignationController {
 		var desigList = desigserv.getAllDesignations();
 		return ResponseEntity.status(HttpStatus.OK).body(desigList);
 	}
-	
+
 	@GetMapping("/{id}")
 	public ResponseEntity<DesignationDto> getDesignationById(@PathVariable Long id) {
 
@@ -68,16 +70,22 @@ public class DesignationController {
 		return ResponseEntity.status(HttpStatus.OK).body(new ResponseDto(HttpStatus.OK.toString(),
 				"Designation " + designationDto.getDesignation() + " is updated successfully"));
 	}
-	
+
 	@GetMapping("/contact-info")
 	public ResponseEntity<DesignationContactInfoDto> getDesignationContactInfo() {
-		
-		return  ResponseEntity.ok(designationContactInfo);
+
+		return ResponseEntity.ok(designationContactInfo);
 	}
 	
+	@RateLimiter(name = "getBuildVersion", fallbackMethod = "getBuildVersionFallBack")	
 	@GetMapping("/build-info")
-	public ResponseEntity<String> getBuildVersion() {
-		
-		return  ResponseEntity.ok(buildVersion);
+	public ResponseEntity<String> getBuildVersion() throws TimeoutException {
+		throw new TimeoutException("build info is not available");
+//		return ResponseEntity.ok("1.1");
 	}
+	public ResponseEntity<String> getBuildVersionFallBack() {
+
+		return ResponseEntity.ok("2.3");
+	}
+
 }
