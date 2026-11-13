@@ -78,12 +78,13 @@ public class DesignationController {
 	}
 	
 	@RateLimiter(name = "getBuildVersion", fallbackMethod = "getBuildVersionFallBack")	
+//	@RateLimiter(name = "getBuildVersion")
 	@GetMapping("/build-info")
 	public ResponseEntity<String> getBuildVersion() throws TimeoutException {
-		throw new TimeoutException("build info is not available");
-//		return ResponseEntity.ok("1.1");
+//		throw new TimeoutException("build info is not available");
+		return ResponseEntity.ok("1.1");
 	}
-	public ResponseEntity<String> getBuildVersionFallBack() {
+	public ResponseEntity<String> getBuildVersionFallBack(Throwable throwable ) {
 
 		return ResponseEntity.ok("2.3");
 	}

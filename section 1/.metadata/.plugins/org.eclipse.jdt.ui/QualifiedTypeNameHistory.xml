@@ -54,10 +54,10 @@
     <fullyQualifiedTypeName name="org.springframework.cloud.circuitbreaker.resilience4j.ReactiveResilience4JCircuitBreakerFactory"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JConfigBuilder"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.client.circuitbreaker.Customizer"/>
-    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
-    <fullyQualifiedTypeName name="java.util.concurrent.TimeoutException"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.gateway.filter.ratelimit.RedisRateLimiter"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
     <fullyQualifiedTypeName name="java.lang.Throwable"/>
     <fullyQualifiedTypeName name="io.github.resilience4j.ratelimiter.annotation.RateLimiter"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.TimeoutException"/>
 </qualifiedTypeNameHistroy>

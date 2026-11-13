@@ -12,6 +12,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="throw new TimeoutException(&quot;build info is not available&quot;);"/>
 			<item value="debug"/>
 			<item value="redis"/>
 			<item value="eazybank"/>

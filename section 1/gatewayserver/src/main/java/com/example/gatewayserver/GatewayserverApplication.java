@@ -42,14 +42,11 @@ public class GatewayserverApplication {
 						.filters(f -> f.rewritePath("/trainingtracker/department/(?<segment>.*)", "/${segment}")
 								.addResponseHeader("X-Response-Time", LocalDateTime.now().toString())
 								.retry(retryConfig -> retryConfig.setRetries(3).setMethods(HttpMethod.GET).setBackoff(Duration.ofMillis(100) , Duration.ofMillis(100), 2, true))
-								
-								
 						).uri("lb://DEPARTMENT")
-				)
+				) 
 				.route(p -> p.path("/trainingtracker/designation/**")
 						.filters(f -> f.rewritePath("/trainingtracker/designation/(?<segment>.*)", "/${segment}")
 								.addResponseHeader("X-Response-Time", LocalDateTime.now().toString())
-								.requestRateLimiter(config -> config.setRateLimiter(redisRateLimiter()))
 						).uri("lb://DESIGNATION")
 				)
 				.route(p -> p.path("/trainingtracker/frequency/**")
