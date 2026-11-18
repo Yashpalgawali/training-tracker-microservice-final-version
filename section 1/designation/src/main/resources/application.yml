@@ -77,4 +77,16 @@ resilience4j.ratelimiter:
       limit-for-period: 1 
       limit-refresh-period: 5000
       timeout-duration: 1000
-      
+
+resilience4j.bulkhead:
+  configs:
+    default:
+      max-concurrent-calls: 2
+      max-wait-duration: 1
+
+logging:
+  level:
+    com:
+      example:
+        demo:
+          designation: DEBUG
