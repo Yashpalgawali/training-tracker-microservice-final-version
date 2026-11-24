@@ -85,7 +85,7 @@ logging:
         demo:
           department: debug
   pattern:
-    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+    level: "${CONSOLE_LOG_PATTERN:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) %magenta([traceId=%X{traceId:-},spanId=%X{spanId:-}]) - %cyan(%msg%n)}"
 
 resilience4j.circuitbreaker:
   configs:

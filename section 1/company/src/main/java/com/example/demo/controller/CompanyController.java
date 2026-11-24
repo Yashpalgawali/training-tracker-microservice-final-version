@@ -44,8 +44,9 @@ public class CompanyController {
 
 	@PostMapping("/")
 	public ResponseEntity<ResponseDto> createCompany(@Valid @RequestBody CompanyDto companyDto) {
-
+		logger.info("creating company using this endpoint {} ",companyDto);		
 		compserv.createCompany(companyDto);
+		logger.info("Created the Company using this endpoint {} ",companyDto);
 		return ResponseEntity.status(HttpStatus.CREATED).body(new ResponseDto(HttpStatus.CREATED.toString(),
 				"Company " + companyDto.getCompanyName() + " is created successfully"));
 	}
