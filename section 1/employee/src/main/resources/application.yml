@@ -24,6 +24,12 @@ spring:
     host: "localhost"
     username: guest
     password: guest
+  http:
+    serviceclient:
+      department:
+        base-url: lb://department
+      designation:
+        base-url: lb://designation
 
 eureka:
  instance:

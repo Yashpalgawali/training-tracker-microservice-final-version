@@ -2,6 +2,7 @@ package com.example.demo.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -26,14 +27,16 @@ public class EmployeeDto {
 	@Size(min = 3, max=30, message = "Employee Code must have at least 3 or 30 characters")
 	String employeeCode;
 	
-	@NotEmpty(message = "Designation can't be Empty")
+	@NotNull(message = "Designation ID can't be Null")
 	Long designationId;
 	
 	String designation;
 	
-	@NotEmpty(message = "Department can't be Empty")
+	@NotNull(message = "Department ID can't be Null")
 	Long departmentId;
 	
 	String departmentName;
+	
+	String companyName;
 }
 
