@@ -5,13 +5,15 @@
 		<item key="DIALOG_Y_ORIGIN" value="306"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="getBuildVersionBulkFallBack"/>
+		<item key="selection" value="employee"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
-		<item key="wholeword" value="true"/>
+		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="company"/>
+			<item value="Company"/>
 			<item value="getBuildVersionBulkFallBack"/>
 			<item value="throw new TimeoutException(&quot;build info is not available&quot;);"/>
 			<item value="debug"/>
@@ -27,6 +29,8 @@
 			<item value="trainingtrackerdb&apos;"/>
 		</list>
 		<list key="replacehistory">
+			<item value="employee"/>
+			<item value="Employee"/>
 			<item value="info"/>
 			<item value="trainingtracker"/>
 		</list>
